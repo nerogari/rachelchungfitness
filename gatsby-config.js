@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Coach Goodenough',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Personal training and health fitness',
   },
+  pathPrefix: '/public',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
