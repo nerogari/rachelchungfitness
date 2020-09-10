@@ -40,8 +40,9 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              'rgb(93, 92, 97) 0.5rem 0px 0px, rgb(93, 92, 97) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(93, 92, 97)',
+              '#73939C 0.5rem 0px 0px, #73939C -0.5rem 0px 0px',
+            backgroundColor: '#73939C',
+            opacity: '0.75',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -53,8 +54,9 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              'rgb(93, 92, 97) 0.5rem 0px 0px, rgb(93, 92, 97) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(93, 92, 97)',
+              '#73939C 0.5rem 0px 0px, #73939C -0.5rem 0px 0px',
+            backgroundColor: '#73939C',
+            opacity: '0.75',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -93,19 +95,7 @@ export const IndexPageTemplate = ({
                       See all services
                     </Link>
                   </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+                </div>                
               </div>
             </div>
           </div>

@@ -13,38 +13,32 @@ description: >-
   Personalized in home training and diet regiments. I'll kick your ass and you'll vomit while crying profusely.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/laugh.jpg
       text: >
         Blurb about services
-    - image: /img/coffee-gear.png
+    - image: /img/about.jpg
       text: >
         blurb about workout plans
-    - image: /img/tutorials.png
+    - image: /img/downward.jpg
       text: >
         blurb about diet plans
-    - image: /img/meeting-space.png
+    - image: /img/overhead_press.jpg
       text: >
         optional blurb
   heading: What we offer
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    Not sure
 main:
-  heading: Great coffee with no compromises
+  heading: Great training with no compromises
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: workout 1
     image: /img/products-grid3.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: workout 2
     image: /img/products-grid2.jpg
   image3:
-    alt: Coffee beans
+    alt: training a client
     image: /img/products-grid1.jpg
 ---

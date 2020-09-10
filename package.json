@@ -29,6 +29,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "s3": "^4.4.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
@@ -37,12 +38,16 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
