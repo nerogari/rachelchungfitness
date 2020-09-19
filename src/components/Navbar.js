@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+//import github from '../img/github-icon.svg'
+import logo from '../img/logo/logo.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -74,6 +74,7 @@ const Navbar = class extends React.Component {
                 Contact
               </Link>                              
             </div>
+            {/* commenting out netlify/github link
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
@@ -86,6 +87,7 @@ const Navbar = class extends React.Component {
                 </span>
               </a>
             </div>
+            */}
           </div>
         </div>
       </nav>

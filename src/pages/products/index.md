@@ -2,10 +2,10 @@
 templateKey: 'product-page'
 path: /products
 title: Packages and Testimonials
-image: /img/downward.jpg
+image: /img/packages_banner.jpg
 heading: Buy with confidence  
 description: >-
-  Description of Services offered
+  Find me on Zerv and book your appointment today!
 intro:
   blurbs:
     - image: /img/laugh.jpg

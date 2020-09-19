@@ -1,12 +1,19 @@
 module.exports = {
   siteMetadata: {
     title: 'Coach Goodenough',
-    description:
-      'Personal training and health fitness',
+    description: 'Personal training and health fitness',
+    author: 'ngarces',
   },
   pathPrefix: '/public',
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-transformer-yaml`,
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `./src/templates/`,
+        },
+      },
     'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

@@ -10,8 +10,7 @@ $dark-grey: #535C5f
 $black: #18181e // bottom colour bar, menu hover
 
 body
-  background-color: $light-grey
-  color: red
+  background-color: $light-grey 
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -36,7 +35,7 @@ body
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 400px
+  height: 20vw
   position: relative
   left: 50%
   right: 50%
@@ -49,7 +48,7 @@ body
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 20vw
     background-size: cover
     background-position: center
     display: flex
@@ -59,15 +58,16 @@ body
 .btn
     display: inline-block
     padding: 12px 16px 10px
-    font-size: 18px
+    font-size: 24px
     font-size: 1rem
     line-height: 1.25
-    background-color: $light-grey
+    background-color: white
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
     color: $dark-grey
     text-align: center
+    position: center
     -webkit-box-shadow: inset 0 0 0 2px $dark-grey
     box-shadow: inset 0 0 0 2px $dark-grey
     -webkit-transition: all .15s ease
@@ -82,9 +82,11 @@ body
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
+
 .navbar-brand .navbar-item.logo
-  background-color: white
+  background-color: $black
   padding: 0 1rem
+
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: $dark-grey
@@ -110,7 +112,7 @@ $menu-label-color: $light-grey
 .social a
     padding: .5em .5em .3em .5em
     border-radius: 1em
-    background-color: $light-grey
+    background-color: white
     margin: .5em
     width: 1em
     height: 1em

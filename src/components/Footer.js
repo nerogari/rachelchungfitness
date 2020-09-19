@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
+import logo from '../img/logo/WHITE/logo.svg'
 import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
+import facebook from '../img/social/facebook.svg'
 
 //Bottom of the page layout
 const Footer = class extends React.Component {
@@ -21,7 +19,7 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered has-background-blue">
           <div className="container has-background-blue">
             <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
+              <div className="column is-3">
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
@@ -48,14 +46,30 @@ const Footer = class extends React.Component {
                 </section>
               </div>                       
               
-              <div className="column is-4 social">       
+              <div className="column is-3 social">       
                 <a title="instagram" href="https://instagram.com/goodenoughpt">
                   <img
                     src={instagram}
                     alt="Instagram"
                     style={{ width: '1em', height: '1em' }}
+                  />                
+                </a> 
+                <a title="facebook" href="https://www.facebook.com/goodenoughpt">
+                  <img
+                    src={facebook}
+                    alt="Facebook"
+                    style={{ width: '1em', height: '1em' }}
                   />
                 </a>                
+              </div>
+              <div className="column is-3 social">       
+                {/*<a title="facebook" href="https://www.facebook.com/goodenoughpt">
+                  <img
+                    src={facebook}
+                    alt="Facebook"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                 </a>  */}              
               </div>
             </div>
           </div>

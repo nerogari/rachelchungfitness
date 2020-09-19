@@ -17,12 +17,13 @@ export const AboutPageTemplate = ({ image, title, content, contentComponent }) =
            })`,
            backgroundPosition: `center`,
            backgroundAttachment: `fixed`,
-          }}
+           }}
         >
           <h2
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #73939C, -0.5rem 0 0 #73939C',
+              borderColor: "white",
+              boxShadow: '1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF',
               backgroundColor: '#73939C',
               color: 'white',
               opacity: '0.75',

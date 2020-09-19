@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+//import Features from '../components/Features'
+//import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
@@ -22,7 +21,7 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `50% 150%`,
         backgroundAttachment: `fixed`,
       }}
     >
@@ -74,25 +73,25 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1 className="title is-size-2">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <div className="subtitle">{mainpitch.description}</div>                    
                   </div>
                 </div>
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
+                    <h1 className="has-text-weight-semibold">
                       {heading}
-                    </h3>
-                    <p>{description}</p>
+                    </h1>
+                    {/*<p>{description}</p>*/}                    
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
+                {/*<Features gridItems={intro.blurbs} />*/}
                 <div className="columns">
-                  <div className="column is-12 has-text-centered">
+                  <div className="column is-12 has-text-centered background-color-white">
                     <Link className="btn" to="/products">
-                      See all services
+                      See All Services
                     </Link>
                   </div>
                 </div>                
@@ -112,9 +111,9 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  //intro: PropTypes.shape({
+  //  blurbs: PropTypes.array,
+  //}),
 }
 
 const IndexPage = ({ data }) => {
@@ -129,7 +128,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        //intro={frontmatter.intro}
       />
     </Layout>
   )
