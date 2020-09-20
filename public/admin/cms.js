@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "721676eb81f8760d9ee1";
+/******/ 	var hotCurrentHash = "c1c996de110e059d5830";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -86990,7 +86990,9 @@ var IndexPagePreview = function IndexPagePreview(_ref) {
       intro: data.intro || {
         blurbs: []
       },
-      mainpitch: data.mainpitch || {},
+      mainpitch: data.mainpitch || {
+        items: []
+      },
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -88046,7 +88048,7 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600643714985
+      // 1600644685896
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
