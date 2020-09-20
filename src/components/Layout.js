@@ -18,24 +18,24 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix('/')}img/logo.png`}
+          href={`${withPrefix('/')}img/logo./logo.svg`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/logo.png`}
+          href={`${withPrefix('/')}img/logo/logo.svg`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/logo.png`}
+          href={`${withPrefix('/')}img/logo/logo.svg`}
           sizes="16x16"
         />
 
         <link
           rel="mask-icon"
-          href={`${withPrefix('/')}img/logo.png`}
+          href={`${withPrefix('/')}img/logo/logo.svg`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#73939C" />
@@ -45,7 +45,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/logo.png`}
+          content={`${withPrefix('/')}img/logo/logo.svg`}
         />
       </Helmet>
       <Navbar />
