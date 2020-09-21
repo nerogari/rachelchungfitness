@@ -16,8 +16,8 @@ const Footer = class extends React.Component {
             style={{ width: '14em', height: '10em' }}
           />
         </div>
-        <div className="content has-text-centered has-background-blue">
-          <div className="container has-background-blue">
+        <div className="content">
+          <div className="container">
             <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-3">
                 <section className="menu">
@@ -46,7 +46,7 @@ const Footer = class extends React.Component {
                 </section>
               </div>                       
               
-              <div className="column is-3 social">       
+              <div className="column is-3 social is-centered">       
                 <a title="instagram" href="https://instagram.com/goodenoughpt">
                   <img
                     src={instagram}
@@ -62,14 +62,8 @@ const Footer = class extends React.Component {
                   />
                 </a>                
               </div>
-              <div className="column is-3 social">       
-                {/*<a title="facebook" href="https://www.facebook.com/goodenoughpt">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                 </a>  */}              
+              <div className="column is-3">       
+                {/* empty   */}              
               </div>
             </div>
           </div>

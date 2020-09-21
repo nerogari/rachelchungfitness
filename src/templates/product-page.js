@@ -32,8 +32,8 @@ export const ProductPageTemplate = ({
           <h2
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #408697, -0.5rem 0 0 #408697',
-              backgroundColor: '#408697',
+              boxShadow: '0.5rem 0 0 #52D6F4, -0.5rem 0 0 #52D6F4',
+              backgroundColor: '#52D6F4',
               opacity: '0.75',
               color: 'white',
               padding: '1rem',
@@ -42,7 +42,7 @@ export const ProductPageTemplate = ({
             {title}
           </h2>
         </div>
-        {/*<section className="section section--gradient">*/}
+        <section className="section section--gradient">
           <div className="container">
             <div className="section">
               <div className="column is-12">
@@ -105,7 +105,7 @@ export const ProductPageTemplate = ({
                   </div>*/}
             </div>
           </div>
-        {/*</section>*/}
+        </section>
       </div>
     )
   }

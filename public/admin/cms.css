@@ -67,8 +67,8 @@ body {
   fill: currentColor; }
 
 .navbar-brand .navbar-item.logo {
-  background-color: black;
-  padding: 0 1rem; }
+  background-color: #F6F6F6;
+  padding: 0 rem; }
 
 footer.footer {
   padding: 3rem 0rem 0rem;

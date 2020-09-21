@@ -39,8 +39,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              '#73939C 0.5rem 0px 0px, #73939C -0.5rem 0px 0px',
-            backgroundColor: '#73939C',
+              '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
+            backgroundColor: '#52D6F4',
             opacity: '0.75',
             color: 'white',
             lineHeight: '1',
@@ -53,8 +53,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              '#73939C 0.5rem 0px 0px, #73939C -0.5rem 0px 0px',
-            backgroundColor: '#73939C',
+              '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
+            backgroundColor: '#52D6F4',
             opacity: '0.75',
             color: 'white',
             lineHeight: '1',
@@ -73,10 +73,21 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title is-size-2">{mainpitch.title}</h1>
+                    <h1 className="title is-size-2">{mainpitch.title}</h1>                    
                   </div>
                   <div className="tile">
-                    <div className="subtitle">{mainpitch.description}</div>                    
+                    <div className="subtitle">{mainpitch.description}</div>                                       
+                  </div>
+                  <div className="subtitle">
+                    <p>
+                      <ul>
+                        <li>Personalized programming is specific to you and your goals.</li>
+                        <li>Progressive and structured programming ensures ongoing success without plateaus or over-training.</li>
+                        <li>Functional Training focuses on movement patterns for superior performance in sport and tasks of daily living</li>
+                        <li>Focus on form and technique. You cannot build greatness on a shaky foundation.</li>
+                        <li>Enhanced mobility and core integrity for greater quality of movement and injury prevention </li>
+                      </ul>  
+                    </p>
                   </div>
                 </div>
                 <div className="columns">
@@ -161,6 +172,7 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+          items
         }
         description
         intro {

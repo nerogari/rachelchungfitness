@@ -23,8 +23,8 @@ export const AboutPageTemplate = ({ image, title, content, contentComponent }) =
             className="has-text-weight-bold is-size-1"
             style={{
               borderColor: "white",
-              boxShadow: '1px 1px 1px #FFFFFF, 1px 1px 1px #FFFFFF',
-              backgroundColor: '#73939C',
+              boxShadow: '1px 1px 1px #52D6F4, 1px 1px 1px #52D6F4',
+              backgroundColor: '#52D6F4',
               color: 'white',
               opacity: '0.75',
               padding: '1rem',
