@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "022f7796e199d030b7f7";
+/******/ 	var hotCurrentHash = "453d7f3ad2296b2b5e3d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -88051,7 +88051,7 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600668946831
+      // 1600701536055
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -88738,68 +88738,60 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
       columnNumber: 21
     }
   }, mainpitch.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "subtitle",
+    className: "tile",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81,
       columnNumber: 19
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "columns",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82,
       columnNumber: 21
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "section",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83,
       columnNumber: 23
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 84,
       columnNumber: 25
     }
-  }, "Personalized programming is specific to you and your goals."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85,
-      columnNumber: 25
-    }
-  }, "Progressive and structured programming ensures ongoing success without plateaus or over-training."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86,
-      columnNumber: 25
-    }
-  }, "Functional Training focuses on movement patterns for superior performance in sport and tasks of daily living"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87,
-      columnNumber: 25
-    }
-  }, "Focus on form and technique. You cannot build greatness on a shaky foundation."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88,
-      columnNumber: 25
-    }
-  }, "Enhanced mobility and core integrity for greater quality of movement and injury prevention "))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, mainpitch.points.map(function (blurb) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: blurb.pointslist,
+      className: "columns",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87,
+        columnNumber: 31
+      }
+    }, blurb.pointslist));
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "columns",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 95,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -88807,7 +88799,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 96,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -88815,7 +88807,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 97,
       columnNumber: 21
     }
   }, heading))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -88823,7 +88815,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 103,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -88831,7 +88823,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 104,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -88840,7 +88832,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 105,
       columnNumber: 21
     }
   }, "See All Services"))))))))));
@@ -88866,7 +88858,7 @@ var IndexPage = function IndexPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 137,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IndexPageTemplate, {
@@ -88880,7 +88872,7 @@ var IndexPage = function IndexPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 138,
       columnNumber: 7
     }
   }));
@@ -88895,7 +88887,7 @@ IndexPage.propTypes = {
 };
 var _default = IndexPage;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
-var pageQuery = "2230354600";
+var pageQuery = "1879690877";
 ;
 
 (function () {

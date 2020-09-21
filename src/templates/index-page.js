@@ -78,16 +78,18 @@ export const IndexPageTemplate = ({
                   <div className="tile">
                     <div className="subtitle">{mainpitch.description}</div>                                       
                   </div>
-                  <div className="subtitle">
-                    <p>
-                      <ul>
-                        <li>Personalized programming is specific to you and your goals.</li>
-                        <li>Progressive and structured programming ensures ongoing success without plateaus or over-training.</li>
-                        <li>Functional Training focuses on movement patterns for superior performance in sport and tasks of daily living</li>
-                        <li>Focus on form and technique. You cannot build greatness on a shaky foundation.</li>
-                        <li>Enhanced mobility and core integrity for greater quality of movement and injury prevention </li>
-                      </ul>  
-                    </p>
+                  <div className="tile">                                          
+                    <div className="columns">
+                      <section className="section">
+                        <ul>
+                          {mainpitch.points.map((blurb) => (      
+                            <div key={blurb.pointslist} className="columns">                                                         
+                              <li>{blurb.pointslist}</li>                            
+                            </div>     
+                          ))}
+                        </ul>
+                      </section>
+                    </div>                 
                   </div>
                 </div>
                 <div className="columns">
@@ -173,7 +175,9 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
-          points
+          points {
+              pointslist
+          }
         }
         description
         intro {
