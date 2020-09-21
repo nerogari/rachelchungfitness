@@ -21,7 +21,6 @@ mainpitch:
         foundation.
     - pointslist: Enhanced mobility and core integrity for greater quality of movement
         and injury prevention
-    - pointslist: This is a test!
 description: Personalized in home training and diet regiments. I'll kick your
   ass and you'll vomit while crying profusely.
 intro:
