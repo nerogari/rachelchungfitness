@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "34fdc1ba9d8d415eba18";
+/******/ 	var hotCurrentHash = "ae9696f1713b869ccc20";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -88051,7 +88051,7 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600653674456
+      // 1600655676149
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -88622,7 +88622,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     style: {
       boxShadow: '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
       backgroundColor: '#52D6F4',
-      opacity: '0.75',
+      opacity: '0.85',
       color: 'white',
       lineHeight: '1',
       padding: '0.25em'
@@ -88638,7 +88638,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     style: {
       boxShadow: '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
       backgroundColor: '#52D6F4',
-      opacity: '0.75',
+      opacity: '0.85',
       color: 'white',
       lineHeight: '1',
       padding: '0.25em'
@@ -88823,7 +88823,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 101,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -88831,7 +88831,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 102,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -88840,7 +88840,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 103,
       columnNumber: 21
     }
   }, "See All Services"))))))))));
@@ -88850,11 +88850,13 @@ IndexPageTemplate.propTypes = {
   title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   heading: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   subheading: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  mainpitch: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string //intro: PropTypes.shape({
-  //  blurbs: PropTypes.array,
-  //}),
-
+  mainpitch: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    points: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  }),
+  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  intro: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    blurbs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  })
 };
 
 var IndexPage = function IndexPage(_ref2) {
@@ -88864,7 +88866,7 @@ var IndexPage = function IndexPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134,
+      lineNumber: 135,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IndexPageTemplate, {
@@ -88873,12 +88875,12 @@ var IndexPage = function IndexPage(_ref2) {
     heading: frontmatter.heading,
     subheading: frontmatter.subheading,
     mainpitch: frontmatter.mainpitch,
-    description: frontmatter.description //intro={frontmatter.intro}
-    ,
+    description: frontmatter.description,
+    intro: frontmatter.intro,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 136,
       columnNumber: 7
     }
   }));
@@ -88893,7 +88895,7 @@ IndexPage.propTypes = {
 };
 var _default = IndexPage;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
-var pageQuery = "4102486674";
+var pageQuery = "2230354600";
 ;
 
 (function () {

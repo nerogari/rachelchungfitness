@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
             boxShadow:
               '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
             backgroundColor: '#52D6F4',
-            opacity: '0.75',
+            opacity: '0.85',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -55,7 +55,7 @@ export const IndexPageTemplate = ({
             boxShadow:
               '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
             backgroundColor: '#52D6F4',
-            opacity: '0.75',
+            opacity: '0.85',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
@@ -95,7 +95,6 @@ export const IndexPageTemplate = ({
                     <h1 className="has-text-weight-semibold">
                       {heading}
                     </h1>
-                    {/*<p>{description}</p>*/}                    
                   </div>
                 </div>
                 {/*<Features gridItems={intro.blurbs} />*/}
@@ -120,11 +119,13 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  mainpitch: PropTypes.shape({
+    points: PropTypes.array,
+  }),
   description: PropTypes.string,
-  //intro: PropTypes.shape({
-  //  blurbs: PropTypes.array,
-  //}),
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -139,7 +140,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        //intro={frontmatter.intro}
+        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -172,7 +173,7 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
-          items
+          points
         }
         description
         intro {

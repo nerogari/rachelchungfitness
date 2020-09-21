@@ -8,7 +8,7 @@ mainpitch:
   title: Your future starts now
   description: >
     Whether you are training for sport, recreation, health or that bucket-list goal you’ve always wanted to achieve, I want to help get you there! Let me tell you why a personalized, progressive and scientifically backed strength & conditioning program is the key to your success. 
-  items: >
+  points: 
     - Personalized programming is specific to you and your goals.
     - Progressive and structured programming ensures ongoing success without plateaus or over-training.
     - Functional Training focuses on movement patterns for superior performance in sport and tasks of daily living
