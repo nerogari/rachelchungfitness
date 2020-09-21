@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Personal Training with Coach Goodenough
-image: /img/home_banner.jpg
+image: /img/home_banner2.jpg
 heading: Services Offered
 subheading: Optimize your life!
 mainpitch:

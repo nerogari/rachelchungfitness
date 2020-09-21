@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "453d7f3ad2296b2b5e3d";
+/******/ 	var hotCurrentHash = "cb4c7020acedfff9d521";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -87256,8 +87256,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _img_logo_WHITE_logo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/logo/WHITE/logo.svg */ "./src/img/logo/WHITE/logo.svg");
-/* harmony import */ var _img_logo_WHITE_logo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_logo_WHITE_logo_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/logo/logo_grey.svg */ "./src/img/logo/logo_grey.svg");
+/* harmony import */ var _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _img_social_instagram_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/social/instagram.svg */ "./src/img/social/instagram.svg");
 /* harmony import */ var _img_social_instagram_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_social_instagram_svg__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _img_social_facebook_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/social/facebook.svg */ "./src/img/social/facebook.svg");
@@ -87307,7 +87307,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-      src: _img_logo_WHITE_logo_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      src: _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
       alt: "logo",
       style: {
         width: '14em',
@@ -88051,23 +88051,12 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600701536055
+      // 1600729832392
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
     }
   
-
-/***/ }),
-
-/***/ "./src/img/logo/WHITE/logo.svg":
-/*!*************************************!*\
-  !*** ./src/img/logo/WHITE/logo.svg ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/logo-9b5b00f4a72e1de69a72f23f3bf958a1.svg";
 
 /***/ }),
 
@@ -88079,6 +88068,17 @@ module.exports = __webpack_require__.p + "static/logo-9b5b00f4a72e1de69a72f23f3b
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/logo-95cd3c4ddd99a74f0ab55744275a0160.svg";
+
+/***/ }),
+
+/***/ "./src/img/logo/logo_grey.svg":
+/*!************************************!*\
+  !*** ./src/img/logo/logo_grey.svg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/logo_grey-19be3c31b204e05e149aaa756b156d4e.svg";
 
 /***/ }),
 
@@ -88168,8 +88168,8 @@ var AboutPageTemplate = function AboutPageTemplate(_ref) {
     className: "has-text-weight-bold is-size-1",
     style: {
       borderColor: "white",
-      boxShadow: '1px 1px 1px #52D6F4, 1px 1px 1px #52D6F4',
-      backgroundColor: '#52D6F4',
+      boxShadow: '1px 1px 1px #138fcd, 1px 1px 1px #138fcd',
+      backgroundColor: '#138fcd',
       color: 'white',
       opacity: '0.75',
       padding: '1rem'
@@ -88590,10 +88590,10 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
       columnNumber: 3
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "full-width-image margin-top-0",
+    className: "full-width-image-container margin-top-0",
     style: {
       backgroundImage: "url(" + (!!image.childImageSharp ? image.childImageSharp.fluid.src : image) + ")",
-      backgroundPosition: "50% 150%",
+      backgroundPosition: "50% 225%",
       backgroundAttachment: "fixed"
     },
     __self: _this,
@@ -88620,8 +88620,8 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen",
     style: {
-      boxShadow: '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
-      backgroundColor: '#52D6F4',
+      boxShadow: '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
+      backgroundColor: '#138fcd',
       opacity: '0.85',
       color: 'white',
       lineHeight: '1',
@@ -88636,8 +88636,8 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
   }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen",
     style: {
-      boxShadow: '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
-      backgroundColor: '#52D6F4',
+      boxShadow: '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
+      backgroundColor: '#138fcd',
       opacity: '0.85',
       color: 'white',
       lineHeight: '1',
@@ -88979,8 +88979,8 @@ var ProductPageTemplate = function ProductPageTemplate(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "has-text-weight-bold is-size-1",
     style: {
-      boxShadow: '0.5rem 0 0 #52D6F4, -0.5rem 0 0 #52D6F4',
-      backgroundColor: '#52D6F4',
+      boxShadow: '0.5rem 0 0 #138fcd, -0.5rem 0 0 #138fcd',
+      backgroundColor: '#138fcd',
       opacity: '0.75',
       color: 'white',
       padding: '1rem'

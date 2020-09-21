@@ -16,12 +16,12 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `50% 150%`,
+        backgroundPosition: `50% 225%`,
         backgroundAttachment: `fixed`,
       }}
     >
@@ -39,8 +39,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
-            backgroundColor: '#52D6F4',
+              '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
+            backgroundColor: '#138fcd',
             opacity: '0.85',
             color: 'white',
             lineHeight: '1',
@@ -53,8 +53,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              '#52D6F4 0.5rem 0px 0px, #52D6F4 -0.5rem 0px 0px',
-            backgroundColor: '#52D6F4',
+              '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
+            backgroundColor: '#138fcd',
             opacity: '0.85',
             color: 'white',
             lineHeight: '1',
