@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "cb4c7020acedfff9d521";
+/******/ 	var hotCurrentHash = "147f40a16077cad79c90";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -880,7 +880,7 @@ module.exports = [{
   plugin: __webpack_require__(/*! ../node_modules/gatsby-plugin-netlify-cms/gatsby-browser.js */ "./node_modules/gatsby-plugin-netlify-cms/gatsby-browser.js"),
   options: {
     "plugins": [],
-    "modulePath": "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt/src/cms/cms.js"
+    "modulePath": "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt/src/cms/cms.js"
   }
 }];
 
@@ -982,11 +982,11 @@ exports.apiRunnerAsync = function (api, args, defaultReturn) {
     return;
   }
 
-  reactHotLoader.register(getResourcesForPathname, "getResourcesForPathname", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\api-runner-browser.js");
-  reactHotLoader.register(getResourcesForPathnameSync, "getResourcesForPathnameSync", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\api-runner-browser.js");
-  reactHotLoader.register(getResourceURLsForPathname, "getResourceURLsForPathname", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\api-runner-browser.js");
-  reactHotLoader.register(loadPage, "loadPage", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\api-runner-browser.js");
-  reactHotLoader.register(loadPageSync, "loadPageSync", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\api-runner-browser.js");
+  reactHotLoader.register(getResourcesForPathname, "getResourcesForPathname", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\api-runner-browser.js");
+  reactHotLoader.register(getResourcesForPathnameSync, "getResourcesForPathnameSync", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\api-runner-browser.js");
+  reactHotLoader.register(getResourceURLsForPathname, "getResourceURLsForPathname", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\api-runner-browser.js");
+  reactHotLoader.register(loadPage, "loadPage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\api-runner-browser.js");
+  reactHotLoader.register(loadPageSync, "loadPageSync", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\api-runner-browser.js");
 })();
 
 ;
@@ -1071,8 +1071,8 @@ var _default = emitter;
     return;
   }
 
-  reactHotLoader.register(emitter, "emitter", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\emitter.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\emitter.js");
+  reactHotLoader.register(emitter, "emitter", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\emitter.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\emitter.js");
 })();
 
 ;
@@ -1195,12 +1195,12 @@ var reportError = function reportError(errorID, error) {
     return;
   }
 
-  reactHotLoader.register(ErrorOverlay, "ErrorOverlay", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
-  reactHotLoader.register(errorMap, "errorMap", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
-  reactHotLoader.register(flat, "flat", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
-  reactHotLoader.register(handleErrorOverlay, "handleErrorOverlay", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
-  reactHotLoader.register(clearError, "clearError", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
-  reactHotLoader.register(reportError, "reportError", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(ErrorOverlay, "ErrorOverlay", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(errorMap, "errorMap", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(flat, "flat", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(handleErrorOverlay, "handleErrorOverlay", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(clearError, "clearError", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
+  reactHotLoader.register(reportError, "reportError", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\error-overlay-handler.js");
 })();
 
 ;
@@ -1381,15 +1381,15 @@ var cleanPath = function cleanPath(rawPathname) {
     return;
   }
 
-  reactHotLoader.register(pathCache, "pathCache", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(matchPaths, "matchPaths", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(trimPathname, "trimPathname", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(absolutify, "absolutify", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(setMatchPaths, "setMatchPaths", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(findMatchPath, "findMatchPath", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(grabMatchParams, "grabMatchParams", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(findPath, "findPath", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
-  reactHotLoader.register(cleanPath, "cleanPath", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(pathCache, "pathCache", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(matchPaths, "matchPaths", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(trimPathname, "trimPathname", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(absolutify, "absolutify", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(setMatchPaths, "setMatchPaths", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(findMatchPath, "findMatchPath", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(grabMatchParams, "grabMatchParams", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(findPath, "findPath", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
+  reactHotLoader.register(cleanPath, "cleanPath", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\find-path.js");
 })();
 
 ;
@@ -1446,7 +1446,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_page_renderer__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony reexport (default from non-harmony) */ __webpack_require__.d(__webpack_exports__, "PageRenderer", function() { return _public_page_renderer__WEBPACK_IMPORTED_MODULE_4___default.a; });
 /* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./loader */ "./.cache/loader.js");
-var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js",
+var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js",
     _this = undefined;
 
 (function () {
@@ -1568,13 +1568,13 @@ function unstable_collectionGraphql() {
     return;
   }
 
-  reactHotLoader.register(prefetchPathname, "prefetchPathname", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(StaticQueryContext, "StaticQueryContext", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(StaticQueryDataRenderer, "StaticQueryDataRenderer", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(StaticQuery, "StaticQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(useStaticQuery, "useStaticQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(graphql, "graphql", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
-  reactHotLoader.register(unstable_collectionGraphql, "unstable_collectionGraphql", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(prefetchPathname, "prefetchPathname", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(StaticQueryContext, "StaticQueryContext", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(StaticQueryDataRenderer, "StaticQueryDataRenderer", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(StaticQuery, "StaticQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(useStaticQuery, "useStaticQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(graphql, "graphql", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
+  reactHotLoader.register(unstable_collectionGraphql, "unstable_collectionGraphql", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\gatsby-browser-entry.js");
 })();
 
 ;
@@ -2233,21 +2233,21 @@ function getStaticQueryResults() {
     return;
   }
 
-  reactHotLoader.register(PageResourceStatus, "PageResourceStatus", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(preferDefault, "preferDefault", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(stripSurroundingSlashes, "stripSurroundingSlashes", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(createPageDataUrl, "createPageDataUrl", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(doFetch, "doFetch", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(doesConnectionSupportPrefetch, "doesConnectionSupportPrefetch", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(toPageResources, "toPageResources", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(BaseLoader, "BaseLoader", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(createComponentUrls, "createComponentUrls", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(ProdLoader, "ProdLoader", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(instance, "instance", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(setLoader, "setLoader", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(publicLoader, "publicLoader", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(getStaticQueryResults, "getStaticQueryResults", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(PageResourceStatus, "PageResourceStatus", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(preferDefault, "preferDefault", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(stripSurroundingSlashes, "stripSurroundingSlashes", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(createPageDataUrl, "createPageDataUrl", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(doFetch, "doFetch", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(doesConnectionSupportPrefetch, "doesConnectionSupportPrefetch", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(toPageResources, "toPageResources", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(BaseLoader, "BaseLoader", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(createComponentUrls, "createComponentUrls", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(ProdLoader, "ProdLoader", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(instance, "instance", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(setLoader, "setLoader", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(publicLoader, "publicLoader", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(getStaticQueryResults, "getStaticQueryResults", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\loader.js");
 })();
 
 ;
@@ -2304,7 +2304,7 @@ var _default = function _default(path) {
     return;
   }
 
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\normalize-page-path.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\normalize-page-path.js");
 })();
 
 ;
@@ -2415,8 +2415,8 @@ var _default = PageRenderer;
     return;
   }
 
-  reactHotLoader.register(PageRenderer, "PageRenderer", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\page-renderer.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\page-renderer.js");
+  reactHotLoader.register(PageRenderer, "PageRenderer", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\page-renderer.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\page-renderer.js");
 })();
 
 ;
@@ -2545,13 +2545,13 @@ var _default = prefetch;
     return;
   }
 
-  reactHotLoader.register(support, "support", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(linkPrefetchStrategy, "linkPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(xhrPrefetchStrategy, "xhrPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(supportedPrefetchStrategy, "supportedPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(preFetched, "preFetched", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(prefetch, "prefetch", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(support, "support", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(linkPrefetchStrategy, "linkPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(xhrPrefetchStrategy, "xhrPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(supportedPrefetchStrategy, "supportedPrefetchStrategy", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(preFetched, "preFetched", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(prefetch, "prefetch", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\prefetch.js");
 })();
 
 ;
@@ -2618,8 +2618,8 @@ var _default = DevPageRenderer;
     return;
   }
 
-  reactHotLoader.register(DevPageRenderer, "DevPageRenderer", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\public-page-renderer-dev.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\public-page-renderer-dev.js");
+  reactHotLoader.register(DevPageRenderer, "DevPageRenderer", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\public-page-renderer-dev.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\public-page-renderer-dev.js");
 })();
 
 ;
@@ -2665,7 +2665,7 @@ if (true) {
     return;
   }
 
-  reactHotLoader.register(preferDefault, "preferDefault", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\public-page-renderer.js");
+  reactHotLoader.register(preferDefault, "preferDefault", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\public-page-renderer.js");
 })();
 
 ;
@@ -2697,7 +2697,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page_renderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page-renderer */ "./.cache/page-renderer.js");
 /* harmony import */ var _normalize_page_path__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./normalize-page-path */ "./.cache/normalize-page-path.js");
 
-var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\query-result-store.js";
+var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\query-result-store.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -2873,9 +2873,9 @@ var StaticQueryStore = /*#__PURE__*/function (_React$Component2) {
     return;
   }
 
-  reactHotLoader.register(getPathFromProps, "getPathFromProps", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\query-result-store.js");
-  reactHotLoader.register(PageQueryStore, "PageQueryStore", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\query-result-store.js");
-  reactHotLoader.register(StaticQueryStore, "StaticQueryStore", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\query-result-store.js");
+  reactHotLoader.register(getPathFromProps, "getPathFromProps", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\query-result-store.js");
+  reactHotLoader.register(PageQueryStore, "PageQueryStore", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\query-result-store.js");
+  reactHotLoader.register(StaticQueryStore, "StaticQueryStore", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\query-result-store.js");
 })();
 
 ;
@@ -3051,18 +3051,18 @@ function unregisterPath(path) {
     return;
   }
 
-  reactHotLoader.register(socket, "socket", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(staticQueryData, "staticQueryData", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(pageQueryData, "pageQueryData", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(isInitialized, "isInitialized", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(getStaticQueryData, "getStaticQueryData", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(getPageQueryData, "getPageQueryData", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(getIsInitialized, "getIsInitialized", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(socketIo, "socketIo", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(inFlightGetPageDataPromiseCache, "inFlightGetPageDataPromiseCache", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(getPageData, "getPageData", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(registerPath, "registerPath", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
-  reactHotLoader.register(unregisterPath, "unregisterPath", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(socket, "socket", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(staticQueryData, "staticQueryData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(pageQueryData, "pageQueryData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(isInitialized, "isInitialized", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(getStaticQueryData, "getStaticQueryData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(getPageQueryData, "getPageQueryData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(getIsInitialized, "getIsInitialized", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(socketIo, "socketIo", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(inFlightGetPageDataPromiseCache, "inFlightGetPageDataPromiseCache", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(getPageData, "getPageData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(registerPath, "registerPath", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
+  reactHotLoader.register(unregisterPath, "unregisterPath", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\socketIo.js");
 })();
 
 ;
@@ -3126,7 +3126,7 @@ function stripPrefix(str, prefix) {
     return;
   }
 
-  reactHotLoader.register(stripPrefix, "stripPrefix", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\.cache\\strip-prefix.js");
+  reactHotLoader.register(stripPrefix, "stripPrefix", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\.cache\\strip-prefix.js");
 })();
 
 ;
@@ -8021,8 +8021,8 @@ setImmediate(function () {
     return;
   }
 
-  reactHotLoader.register(_netlifyIdentityWidget, "_netlifyIdentityWidget", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");
-  reactHotLoader.register(addLoginListener, "addLoginListener", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");
+  reactHotLoader.register(_netlifyIdentityWidget, "_netlifyIdentityWidget", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");
+  reactHotLoader.register(addLoginListener, "addLoginListener", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms-identity.js");
 })();
 
 ;
@@ -8093,8 +8093,8 @@ _netlifyCmsApp.default.registerPreviewStyle("cms.css");
     return;
   }
 
-  reactHotLoader.register(_netlifyCmsApp, "_netlifyCmsApp", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");
-  reactHotLoader.register(_emitter, "_emitter", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");
+  reactHotLoader.register(_netlifyCmsApp, "_netlifyCmsApp", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");
+  reactHotLoader.register(_emitter, "_emitter", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\cms.js");
 })();
 
 ;
@@ -8170,10 +8170,10 @@ exports.onInitialClientRender = function (_, _ref) {
     return;
   }
 
-  reactHotLoader.register(_interopRequireWildcard2, "_interopRequireWildcard2", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
-  reactHotLoader.register(routes, "routes", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
-  reactHotLoader.register(errorRoute, "errorRoute", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
-  reactHotLoader.register(accessTokenRoute, "accessTokenRoute", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
+  reactHotLoader.register(_interopRequireWildcard2, "_interopRequireWildcard2", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
+  reactHotLoader.register(routes, "routes", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
+  reactHotLoader.register(errorRoute, "errorRoute", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
+  reactHotLoader.register(accessTokenRoute, "accessTokenRoute", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-plugin-netlify-cms\\gatsby-browser.js");
 })();
 
 ;
@@ -8669,10 +8669,10 @@ exports.onRouteUpdate = function (apiCallbackContext, pluginOptions) {
     return;
   }
 
-  reactHotLoader.register(DEFAULT_OPTIONS, "DEFAULT_OPTIONS", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
-  reactHotLoader.register(imageClass, "imageClass", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
-  reactHotLoader.register(imageBackgroundClass, "imageBackgroundClass", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
-  reactHotLoader.register(imageWrapperClass, "imageWrapperClass", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
+  reactHotLoader.register(DEFAULT_OPTIONS, "DEFAULT_OPTIONS", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
+  reactHotLoader.register(imageClass, "imageClass", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
+  reactHotLoader.register(imageBackgroundClass, "imageBackgroundClass", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
+  reactHotLoader.register(imageWrapperClass, "imageWrapperClass", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-remark-images\\gatsby-browser.js");
 })();
 
 ;
@@ -86805,7 +86805,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _templates_about_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../templates/about-page */ "./src/templates/about-page.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -86852,8 +86852,8 @@ var _default = AboutPagePreview;
     return;
   }
 
-  reactHotLoader.register(AboutPagePreview, "AboutPagePreview", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js");
+  reactHotLoader.register(AboutPagePreview, "AboutPagePreview", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\AboutPagePreview.js");
 })();
 
 ;
@@ -86881,7 +86881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _templates_blog_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../templates/blog-post */ "./src/templates/blog-post.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -86931,8 +86931,8 @@ var _default = BlogPostPreview;
     return;
   }
 
-  reactHotLoader.register(BlogPostPreview, "BlogPostPreview", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js");
+  reactHotLoader.register(BlogPostPreview, "BlogPostPreview", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\BlogPostPreview.js");
 })();
 
 ;
@@ -86960,7 +86960,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _templates_index_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../templates/index-page */ "./src/templates/index-page.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87029,8 +87029,8 @@ var _default = IndexPagePreview;
     return;
   }
 
-  reactHotLoader.register(IndexPagePreview, "IndexPagePreview", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js");
+  reactHotLoader.register(IndexPagePreview, "IndexPagePreview", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\IndexPagePreview.js");
 })();
 
 ;
@@ -87058,7 +87058,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _templates_product_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../templates/product-page */ "./src/templates/product-page.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87139,8 +87139,8 @@ var _default = ProductPagePreview;
     return;
   }
 
-  reactHotLoader.register(ProductPagePreview, "ProductPagePreview", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js");
+  reactHotLoader.register(ProductPagePreview, "ProductPagePreview", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\cms\\preview-templates\\ProductPagePreview.js");
 })();
 
 ;
@@ -87168,7 +87168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Content.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Content.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87228,9 +87228,9 @@ var _default = Content;
     return;
   }
 
-  reactHotLoader.register(HTMLContent, "HTMLContent", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Content.js");
-  reactHotLoader.register(Content, "Content", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Content.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Content.js");
+  reactHotLoader.register(HTMLContent, "HTMLContent", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Content.js");
+  reactHotLoader.register(Content, "Content", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Content.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Content.js");
 })();
 
 ;
@@ -87263,7 +87263,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_social_facebook_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/social/facebook.svg */ "./src/img/social/facebook.svg");
 /* harmony import */ var _img_social_facebook_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_social_facebook_svg__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Footer.js";
+var _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Footer.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87517,8 +87517,8 @@ var _default = Footer;
     return;
   }
 
-  reactHotLoader.register(Footer, "Footer", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Footer.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Footer.js");
+  reactHotLoader.register(Footer, "Footer", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Footer.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Footer.js");
 })();
 
 ;
@@ -87550,7 +87550,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SiteMetadata__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SiteMetadata */ "./src/components/SiteMetadata.js");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Layout.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Layout.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87740,8 +87740,8 @@ var _default = TemplateWrapper;
     return;
   }
 
-  reactHotLoader.register(TemplateWrapper, "TemplateWrapper", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Layout.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Layout.js");
+  reactHotLoader.register(TemplateWrapper, "TemplateWrapper", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Layout.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Layout.js");
 })();
 
 ;
@@ -87772,7 +87772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _temp,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Navbar.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Navbar.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -87971,8 +87971,143 @@ var _default = Navbar;
     return;
   }
 
-  reactHotLoader.register(Navbar, "Navbar", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Navbar.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\Navbar.js");
+  reactHotLoader.register(Navbar, "Navbar", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Navbar.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Navbar.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./src/components/Pricing.js":
+/*!***********************************!*\
+  !*** ./src/components/Pricing.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+
+var Pricing = function Pricing(_ref) {
+  var data = _ref.data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "columns",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 3
+    }
+  }, data.map(function (price) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: price.plan,
+      className: "column",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "section",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "is-size-2 has-text-centered has-text-weight-semibold",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 11
+      }
+    }, price.plan), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      className: "is-size-1 has-text-weight-bold has-text-info-link has-text-centered",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12,
+        columnNumber: 11
+      }
+    }, "$", price.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "has-text-weight-semibold",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15,
+        columnNumber: 11
+      }
+    }, price.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 11
+      }
+    }, price.items.map(function (item) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: item,
+        className: "is-size-5",
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 15
+        }
+      }, item);
+    }))));
+  }));
+};
+
+Pricing.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    plan: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    price: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number]),
+    description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    items: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  }))
+};
+var _default = Pricing;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Pricing, "Pricing", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js");
 })();
 
 ;
@@ -88028,8 +88163,8 @@ var _default = useSiteMetadata;
     return;
   }
 
-  reactHotLoader.register(useSiteMetadata, "useSiteMetadata", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\SiteMetadata.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\components\\SiteMetadata.js");
+  reactHotLoader.register(useSiteMetadata, "useSiteMetadata", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\SiteMetadata.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\SiteMetadata.js");
 })();
 
 ;
@@ -88051,7 +88186,7 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600729832392
+      // 1600891388491
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -88122,7 +88257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
 /* harmony import */ var _components_Content__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Content */ "./src/components/Content.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\about-page.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\about-page.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -88284,10 +88419,10 @@ var aboutPageQuery = "3425175776";
     return;
   }
 
-  reactHotLoader.register(AboutPageTemplate, "AboutPageTemplate", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\about-page.js");
-  reactHotLoader.register(AboutPage, "AboutPage", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\about-page.js");
-  reactHotLoader.register(aboutPageQuery, "aboutPageQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\about-page.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\about-page.js");
+  reactHotLoader.register(AboutPageTemplate, "AboutPageTemplate", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\about-page.js");
+  reactHotLoader.register(AboutPage, "AboutPage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\about-page.js");
+  reactHotLoader.register(aboutPageQuery, "aboutPageQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\about-page.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\about-page.js");
 })();
 
 ;
@@ -88322,7 +88457,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
 /* harmony import */ var _components_Content__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Content */ "./src/components/Content.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\blog-post.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\blog-post.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -88523,10 +88658,10 @@ var pageQuery = "2655957122";
     return;
   }
 
-  reactHotLoader.register(BlogPostTemplate, "BlogPostTemplate", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\blog-post.js");
-  reactHotLoader.register(BlogPost, "BlogPost", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\blog-post.js");
-  reactHotLoader.register(pageQuery, "pageQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\blog-post.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\blog-post.js");
+  reactHotLoader.register(BlogPostTemplate, "BlogPostTemplate", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\blog-post.js");
+  reactHotLoader.register(BlogPost, "BlogPost", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\blog-post.js");
+  reactHotLoader.register(pageQuery, "pageQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\blog-post.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\blog-post.js");
 })();
 
 ;
@@ -88557,7 +88692,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\index-page.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\index-page.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -88897,10 +89032,10 @@ var pageQuery = "1879690877";
     return;
   }
 
-  reactHotLoader.register(IndexPageTemplate, "IndexPageTemplate", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\index-page.js");
-  reactHotLoader.register(IndexPage, "IndexPage", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\index-page.js");
-  reactHotLoader.register(pageQuery, "pageQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\index-page.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\index-page.js");
+  reactHotLoader.register(IndexPageTemplate, "IndexPageTemplate", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\index-page.js");
+  reactHotLoader.register(IndexPage, "IndexPage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\index-page.js");
+  reactHotLoader.register(pageQuery, "pageQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\index-page.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\index-page.js");
 })();
 
 ;
@@ -88930,8 +89065,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
+/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Pricing */ "./src/components/Pricing.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\product-page.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -88947,14 +89083,16 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
  //import Features from '../components/Features'
 //import Testimonials from '../components/Testimonials'
-//import Pricing from '../components/Pricing'
-//import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
+ //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 var ProductPageTemplate = function ProductPageTemplate(_ref) {
   var image = _ref.image,
       title = _ref.title,
       heading = _ref.heading,
-      description = _ref.description;
+      description = _ref.description,
+      fullImage = _ref.fullImage,
+      pricing = _ref.pricing;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content",
     __self: _this,
@@ -89063,7 +89201,58 @@ var ProductPageTemplate = function ProductPageTemplate(_ref) {
       lineNumber: 53,
       columnNumber: 78
     }
-  }, "Book an appointment")))))));
+  }, "Book an appointment"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "columns",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 15
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "column is-10 is-offset-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "full-width-image-container",
+    style: {
+      backgroundImage: "url(" + (fullImage.childImageSharp ? fullImage.childImageSharp.fluid.src : fullImage) + ")"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 19
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "has-text-weight-semibold is-size-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 19
+    }
+  }, pricing.heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "is-size-5",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102,
+      columnNumber: 19
+    }
+  }, pricing.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    data: pricing.plans,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103,
+      columnNumber: 19
+    }
+  })))))));
 };
 ProductPageTemplate.propTypes = {
   image: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]),
@@ -89137,10 +89326,10 @@ var productPageQuery = "3222945986";
     return;
   }
 
-  reactHotLoader.register(ProductPageTemplate, "ProductPageTemplate", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\product-page.js");
-  reactHotLoader.register(ProductPage, "ProductPage", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\product-page.js");
-  reactHotLoader.register(productPageQuery, "productPageQuery", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\product-page.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\AWS Files\\goodenoughpt\\src\\templates\\product-page.js");
+  reactHotLoader.register(ProductPageTemplate, "ProductPageTemplate", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js");
+  reactHotLoader.register(ProductPage, "ProductPage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js");
+  reactHotLoader.register(productPageQuery, "productPageQuery", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js");
 })();
 
 ;
@@ -89160,9 +89349,9 @@ var productPageQuery = "3222945986";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\doubleohseven\Documents\AWS Files\goodenoughpt\node_modules\gatsby-plugin-netlify-cms\cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
-__webpack_require__(/*! C:\Users\doubleohseven\Documents\AWS Files\goodenoughpt\node_modules\gatsby-plugin-netlify-cms\cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
-module.exports = __webpack_require__(/*! C:\Users\doubleohseven\Documents\AWS Files\goodenoughpt/src/cms/cms.js */"./src/cms/cms.js");
+__webpack_require__(/*! C:\Users\doubleohseven\Documents\Website Files\goodenoughpt\node_modules\gatsby-plugin-netlify-cms\cms.js */"./node_modules/gatsby-plugin-netlify-cms/cms.js");
+__webpack_require__(/*! C:\Users\doubleohseven\Documents\Website Files\goodenoughpt\node_modules\gatsby-plugin-netlify-cms\cms-identity.js */"./node_modules/gatsby-plugin-netlify-cms/cms-identity.js");
+module.exports = __webpack_require__(/*! C:\Users\doubleohseven\Documents\Website Files\goodenoughpt/src/cms/cms.js */"./src/cms/cms.js");
 
 
 /***/ }),

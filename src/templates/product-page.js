@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
 //import Testimonials from '../components/Testimonials'
-//import Pricing from '../components/Pricing'
+import Pricing from '../components/Pricing'
 //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
@@ -15,8 +15,8 @@ export const ProductPageTemplate = ({
   //intro,
   //main,
   //testimonials,
-  //fullImage,
-  //pricing,
+  fullImage,
+  pricing,
 }) => {
     return (
       <div className="content">
@@ -55,9 +55,9 @@ export const ProductPageTemplate = ({
                     </Link>
                 </div>
               </div>
-              {/*<div className="columns">
+              <div className="columns">
                 <div className="column is-10 is-offset-1">
-                  <Features gridItems={intro.blurbs} />
+                  {/*<Features gridItems={intro.blurbs} />
                   <div className="columns">
                     <div className="column is-7">
                       <h3 className="has-text-weight-semibold is-size-3">
@@ -87,7 +87,7 @@ export const ProductPageTemplate = ({
                       </div>
                     </div>
                   </div>
-                  <Testimonials testimonials={testimonials} />
+                  <Testimonials testimonials={testimonials} /> */}
                   <div
                     className="full-width-image-container"
                     style={{
@@ -101,10 +101,10 @@ export const ProductPageTemplate = ({
                   </h2>
                   <p className="is-size-5">{pricing.description}</p>
                   <Pricing data={pricing.plans} />
+                  </div>
                 </div>
-                  </div>*/}
+              </div>
             </div>
-          </div>
         </section>
       </div>
     )
