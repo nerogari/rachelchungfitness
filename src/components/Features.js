@@ -23,7 +23,7 @@ const FeatureGrid = ({ gridItems }) => (
             <ul>
             {item.text.map((info) => (      
               <div key={info.package}>                                                         
-                <li className="is-size-7">{info.package}</li>                            
+                <li className="is-size-5">{info.package}</li>                            
               </div>     
             ))}
           </ul>          
