@@ -26,17 +26,26 @@ description: Personalized in home training and diet regiments. I'll kick your
 intro:
   blurbs:
     - image: /img/laugh.jpg
-      text: |
-        Blurb about services
+      packagetype: "Introductory Package - 2hrs: (New clients only) $80"
+      text: 
+        - package: Complimentary Movement Assessment & Goal Setting discussion
+        - package: Week 1, Day 1 of your program. This is a great opportunity to taste-test Personalized Training without the commitment. Experience customized programming, superior-level coaching, and learn how to train more effectively for continued success both in and outside of the gym. Once our session is complete we will spend some time going over your program and discuss what your future training will look like, what you can expect from me, and what programming option best suits your needs."
     - image: /img/about.jpg
-      text: |
-        blurb about workout plans
+      packagetype: Gym Training (388 Carlaw OR 682 Huron St.)
+      text: 
+        - package: 6 Session Program      $720    ($120 per session)
+        - package: 12 Session Program     $1380   ($115 per session)
+        - package: 24 Session Program     $2640   ($110 per session)
     - image: /img/downward.jpg
-      text: |
-        blurb about diet plans
+      packagetype: In-Home Personal Training
+      text: 
+        - package: Please contact me directly for pricing and package options. 
     - image: /img/overhead_press.jpg
-      text: |
-        optional blurb
+      packagetype: Monthly Program & Nutrition Coaching $250/mo
+      text: 
+        - package: 4 week, 2x per week customized strength training program
+        - package: 4 week, 2x per week customized conditioning program
+        - package: Bi-weekly phone or zoom calls to go discuss nutrition, form checks and any questions you may have
   heading: What we offer
   description: |
     Not sure

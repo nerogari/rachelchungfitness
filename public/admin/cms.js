@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "147f40a16077cad79c90";
+/******/ 	var hotCurrentHash = "2a58edc2c70c03fffad9";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -7590,6 +7590,805 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     };
 }));
 
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-image/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/gatsby-image/index.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"));
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var logDeprecationNotice = function logDeprecationNotice(prop, replacement) {
+  if (false) {}
+
+  console.log("\n    The \"" + prop + "\" prop is now deprecated and will be removed in the next major version\n    of \"gatsby-image\".\n    ");
+
+  if (replacement) {
+    console.log("Please use " + replacement + " instead of \"" + prop + "\".");
+  }
+}; // Handle legacy props during their deprecation phase
+
+
+var convertProps = function convertProps(props) {
+  var convertedProps = (0, _extends2.default)({}, props);
+  var resolutions = convertedProps.resolutions,
+      sizes = convertedProps.sizes,
+      critical = convertedProps.critical;
+
+  if (resolutions) {
+    convertedProps.fixed = resolutions;
+    logDeprecationNotice("resolutions", "the gatsby-image v2 prop \"fixed\"");
+    delete convertedProps.resolutions;
+  }
+
+  if (sizes) {
+    convertedProps.fluid = sizes;
+    logDeprecationNotice("sizes", "the gatsby-image v2 prop \"fluid\"");
+    delete convertedProps.sizes;
+  }
+
+  if (critical) {
+    logDeprecationNotice("critical", "the native \"loading\" attribute");
+    convertedProps.loading = "eager";
+  } // convert fluid & fixed to arrays so we only have to work with arrays
+
+
+  if (convertedProps.fluid) {
+    convertedProps.fluid = groupByMedia([].concat(convertedProps.fluid));
+  }
+
+  if (convertedProps.fixed) {
+    convertedProps.fixed = groupByMedia([].concat(convertedProps.fixed));
+  }
+
+  return convertedProps;
+};
+/**
+ * Checks if fluid or fixed are art-direction arrays.
+ *
+ * @param currentData  {{media?: string}[]}   The props to check for images.
+ * @return {boolean}
+ */
+
+
+var hasArtDirectionSupport = function hasArtDirectionSupport(currentData) {
+  return !!currentData && Array.isArray(currentData) && currentData.some(function (image) {
+    return typeof image.media !== "undefined";
+  });
+};
+/**
+ * Tries to detect if a media query matches the current viewport.
+ * @property media   {{media?: string}}  A media query string.
+ * @return {boolean}
+ */
+
+
+var matchesMedia = function matchesMedia(_ref) {
+  var media = _ref.media;
+  return media ? isBrowser && !!window.matchMedia(media).matches : false;
+};
+/**
+ * Find the source of an image to use as a key in the image cache.
+ * Use `the first image in either `fixed` or `fluid`
+ * @param {{fluid: {src: string, media?: string}[], fixed: {src: string, media?: string}[]}} args
+ * @return {string?} Returns image src or undefined it not given.
+ */
+
+
+var getImageCacheKey = function getImageCacheKey(_ref2) {
+  var fluid = _ref2.fluid,
+      fixed = _ref2.fixed;
+  var srcData = getCurrentSrcData(fluid || fixed || []);
+  return srcData && srcData.src;
+};
+/**
+ * Returns the current src - Preferably with art-direction support.
+ * @param currentData  {{media?: string}[], maxWidth?: Number, maxHeight?: Number}   The fluid or fixed image array.
+ * @return {{src: string, media?: string, maxWidth?: Number, maxHeight?: Number}}
+ */
+
+
+var getCurrentSrcData = function getCurrentSrcData(currentData) {
+  if (isBrowser && hasArtDirectionSupport(currentData)) {
+    // Do we have an image for the current Viewport?
+    var foundMedia = currentData.findIndex(matchesMedia);
+
+    if (foundMedia !== -1) {
+      return currentData[foundMedia];
+    } // No media matches, select first element without a media condition
+
+
+    var noMedia = currentData.findIndex(function (image) {
+      return typeof image.media === "undefined";
+    });
+
+    if (noMedia !== -1) {
+      return currentData[noMedia];
+    }
+  } // Else return the first image.
+
+
+  return currentData[0];
+}; // Cache if we've seen an image before so we don't bother with
+// lazy-loading & fading in on subsequent mounts.
+
+
+var imageCache = Object.create({});
+
+var inImageCache = function inImageCache(props) {
+  var convertedProps = convertProps(props);
+  var cacheKey = getImageCacheKey(convertedProps);
+  return imageCache[cacheKey] || false;
+};
+
+var activateCacheForImage = function activateCacheForImage(props) {
+  var convertedProps = convertProps(props);
+  var cacheKey = getImageCacheKey(convertedProps);
+
+  if (cacheKey) {
+    imageCache[cacheKey] = true;
+  }
+}; // Native lazy-loading support: https://addyosmani.com/blog/lazy-loading/
+
+
+var hasNativeLazyLoadSupport = typeof HTMLImageElement !== "undefined" && "loading" in HTMLImageElement.prototype;
+var isBrowser = typeof window !== "undefined";
+var hasIOSupport = isBrowser && window.IntersectionObserver;
+var io;
+var listeners = new WeakMap();
+
+function getIO() {
+  if (typeof io === "undefined" && typeof window !== "undefined" && window.IntersectionObserver) {
+    io = new window.IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (listeners.has(entry.target)) {
+          var cb = listeners.get(entry.target); // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            io.unobserve(entry.target);
+            listeners.delete(entry.target);
+            cb();
+          }
+        }
+      });
+    }, {
+      rootMargin: "200px"
+    });
+  }
+
+  return io;
+}
+
+function generateImageSources(imageVariants) {
+  return imageVariants.map(function (_ref3) {
+    var src = _ref3.src,
+        srcSet = _ref3.srcSet,
+        srcSetWebp = _ref3.srcSetWebp,
+        media = _ref3.media,
+        sizes = _ref3.sizes;
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, {
+      key: src
+    }, srcSetWebp && /*#__PURE__*/_react.default.createElement("source", {
+      type: "image/webp",
+      media: media,
+      srcSet: srcSetWebp,
+      sizes: sizes
+    }), srcSet && /*#__PURE__*/_react.default.createElement("source", {
+      media: media,
+      srcSet: srcSet,
+      sizes: sizes
+    }));
+  });
+} // Return an array ordered by elements having a media prop, does not use
+// native sort, as a stable sort is not guaranteed by all browsers/versions
+
+
+function groupByMedia(imageVariants) {
+  var withMedia = [];
+  var without = [];
+  imageVariants.forEach(function (variant) {
+    return (variant.media ? withMedia : without).push(variant);
+  });
+
+  if (without.length > 1 && "development" !== "production") {
+    console.warn("We've found " + without.length + " sources without a media property. They might be ignored by the browser, see: https://www.gatsbyjs.org/packages/gatsby-image/#art-directing-multiple-images");
+  }
+
+  return [].concat(withMedia, without);
+}
+
+function generateTracedSVGSources(imageVariants) {
+  return imageVariants.map(function (_ref4) {
+    var src = _ref4.src,
+        media = _ref4.media,
+        tracedSVG = _ref4.tracedSVG;
+    return /*#__PURE__*/_react.default.createElement("source", {
+      key: src,
+      media: media,
+      srcSet: tracedSVG
+    });
+  });
+}
+
+function generateBase64Sources(imageVariants) {
+  return imageVariants.map(function (_ref5) {
+    var src = _ref5.src,
+        media = _ref5.media,
+        base64 = _ref5.base64;
+    return /*#__PURE__*/_react.default.createElement("source", {
+      key: src,
+      media: media,
+      srcSet: base64
+    });
+  });
+}
+
+function generateNoscriptSource(_ref6, isWebp) {
+  var srcSet = _ref6.srcSet,
+      srcSetWebp = _ref6.srcSetWebp,
+      media = _ref6.media,
+      sizes = _ref6.sizes;
+  var src = isWebp ? srcSetWebp : srcSet;
+  var mediaAttr = media ? "media=\"" + media + "\" " : "";
+  var typeAttr = isWebp ? "type='image/webp' " : "";
+  var sizesAttr = sizes ? "sizes=\"" + sizes + "\" " : "";
+  return "<source " + typeAttr + mediaAttr + "srcset=\"" + src + "\" " + sizesAttr + "/>";
+}
+
+function generateNoscriptSources(imageVariants) {
+  return imageVariants.map(function (variant) {
+    return (variant.srcSetWebp ? generateNoscriptSource(variant, true) : "") + generateNoscriptSource(variant);
+  }).join("");
+}
+
+var listenToIntersections = function listenToIntersections(el, cb) {
+  var observer = getIO();
+
+  if (observer) {
+    observer.observe(el);
+    listeners.set(el, cb);
+  }
+
+  return function () {
+    observer.unobserve(el);
+    listeners.delete(el);
+  };
+};
+
+var noscriptImg = function noscriptImg(props) {
+  // Check if prop exists before adding each attribute to the string output below to prevent
+  // HTML validation issues caused by empty values like width="" and height=""
+  var src = props.src ? "src=\"" + props.src + "\" " : "src=\"\" "; // required attribute
+
+  var sizes = props.sizes ? "sizes=\"" + props.sizes + "\" " : "";
+  var srcSet = props.srcSet ? "srcset=\"" + props.srcSet + "\" " : "";
+  var title = props.title ? "title=\"" + props.title + "\" " : "";
+  var alt = props.alt ? "alt=\"" + props.alt + "\" " : "alt=\"\" "; // required attribute
+
+  var width = props.width ? "width=\"" + props.width + "\" " : "";
+  var height = props.height ? "height=\"" + props.height + "\" " : "";
+  var crossOrigin = props.crossOrigin ? "crossorigin=\"" + props.crossOrigin + "\" " : "";
+  var loading = props.loading ? "loading=\"" + props.loading + "\" " : "";
+  var draggable = props.draggable ? "draggable=\"" + props.draggable + "\" " : "";
+  var sources = generateNoscriptSources(props.imageVariants);
+  return "<picture>" + sources + "<img " + loading + width + height + sizes + srcSet + src + alt + title + crossOrigin + draggable + "style=\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\"/></picture>";
+}; // Earlier versions of gatsby-image during the 2.x cycle did not wrap
+// the `Img` component in a `picture` element. This maintains compatibility
+// until a breaking change can be introduced in the next major release
+
+
+var Placeholder = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
+  var src = props.src,
+      imageVariants = props.imageVariants,
+      generateSources = props.generateSources,
+      spreadProps = props.spreadProps,
+      ariaHidden = props.ariaHidden;
+
+  var baseImage = /*#__PURE__*/_react.default.createElement(Img, (0, _extends2.default)({
+    ref: ref,
+    src: src
+  }, spreadProps, {
+    ariaHidden: ariaHidden
+  }));
+
+  return imageVariants.length > 1 ? /*#__PURE__*/_react.default.createElement("picture", null, generateSources(imageVariants), baseImage) : baseImage;
+});
+
+var Img = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
+  var sizes = props.sizes,
+      srcSet = props.srcSet,
+      src = props.src,
+      style = props.style,
+      onLoad = props.onLoad,
+      onError = props.onError,
+      loading = props.loading,
+      draggable = props.draggable,
+      ariaHidden = props.ariaHidden,
+      otherProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["sizes", "srcSet", "src", "style", "onLoad", "onError", "loading", "draggable", "ariaHidden"]);
+  return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
+    "aria-hidden": ariaHidden,
+    sizes: sizes,
+    srcSet: srcSet,
+    src: src
+  }, otherProps, {
+    onLoad: onLoad,
+    onError: onError,
+    ref: ref,
+    loading: loading,
+    draggable: draggable,
+    style: (0, _extends2.default)({
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center"
+    }, style)
+  }));
+});
+
+Img.propTypes = {
+  style: _propTypes.default.object,
+  onError: _propTypes.default.func,
+  onLoad: _propTypes.default.func
+};
+
+var Image = /*#__PURE__*/function (_React$Component) {
+  (0, _inheritsLoose2.default)(Image, _React$Component);
+
+  function Image(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this; // If this image has already been loaded before then we can assume it's
+    // already in the browser cache so it's cheap to just show directly.
+
+    _this.seenBefore = isBrowser && inImageCache(props);
+    _this.isCritical = props.loading === "eager" || props.critical;
+    _this.addNoScript = !(_this.isCritical && !props.fadeIn);
+    _this.useIOSupport = !hasNativeLazyLoadSupport && hasIOSupport && !_this.isCritical && !_this.seenBefore;
+    var isVisible = _this.isCritical || isBrowser && (hasNativeLazyLoadSupport || !_this.useIOSupport);
+    _this.state = {
+      isVisible: isVisible,
+      imgLoaded: false,
+      imgCached: false,
+      fadeIn: !_this.seenBefore && props.fadeIn
+    };
+    _this.imageRef = /*#__PURE__*/_react.default.createRef();
+    _this.placeholderRef = props.placeholderRef || /*#__PURE__*/_react.default.createRef();
+    _this.handleImageLoaded = _this.handleImageLoaded.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleRef = _this.handleRef.bind((0, _assertThisInitialized2.default)(_this));
+    return _this;
+  }
+
+  var _proto = Image.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    if (this.state.isVisible && typeof this.props.onStartLoad === "function") {
+      this.props.onStartLoad({
+        wasCached: inImageCache(this.props)
+      });
+    }
+
+    if (this.isCritical) {
+      var img = this.imageRef.current;
+
+      if (img && img.complete) {
+        this.handleImageLoaded();
+      }
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this.cleanUpListeners) {
+      this.cleanUpListeners();
+    }
+  } // Specific to IntersectionObserver based lazy-load support
+  ;
+
+  _proto.handleRef = function handleRef(ref) {
+    var _this2 = this;
+
+    if (this.useIOSupport && ref) {
+      this.cleanUpListeners = listenToIntersections(ref, function () {
+        var imageInCache = inImageCache(_this2.props);
+
+        if (!_this2.state.isVisible && typeof _this2.props.onStartLoad === "function") {
+          _this2.props.onStartLoad({
+            wasCached: imageInCache
+          });
+        } // imgCached and imgLoaded must update after isVisible,
+        // Once isVisible is true, imageRef becomes accessible, which imgCached needs access to.
+        // imgLoaded and imgCached are in a 2nd setState call to be changed together,
+        // avoiding initiating unnecessary animation frames from style changes.
+
+
+        _this2.setState({
+          isVisible: true
+        }, function () {
+          _this2.setState({
+            imgLoaded: imageInCache,
+            // `currentSrc` should be a string, but can be `undefined` in IE,
+            // !! operator validates the value is not undefined/null/""
+            // for lazyloaded components this might be null
+            // TODO fix imgCached behaviour as it's now false when it's lazyloaded
+            imgCached: !!(_this2.imageRef.current && _this2.imageRef.current.currentSrc)
+          });
+        });
+      });
+    }
+  };
+
+  _proto.handleImageLoaded = function handleImageLoaded() {
+    activateCacheForImage(this.props);
+    this.setState({
+      imgLoaded: true
+    });
+
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
+  };
+
+  _proto.render = function render() {
+    var _convertProps = convertProps(this.props),
+        title = _convertProps.title,
+        alt = _convertProps.alt,
+        className = _convertProps.className,
+        _convertProps$style = _convertProps.style,
+        style = _convertProps$style === void 0 ? {} : _convertProps$style,
+        _convertProps$imgStyl = _convertProps.imgStyle,
+        imgStyle = _convertProps$imgStyl === void 0 ? {} : _convertProps$imgStyl,
+        _convertProps$placeho = _convertProps.placeholderStyle,
+        placeholderStyle = _convertProps$placeho === void 0 ? {} : _convertProps$placeho,
+        placeholderClassName = _convertProps.placeholderClassName,
+        fluid = _convertProps.fluid,
+        fixed = _convertProps.fixed,
+        backgroundColor = _convertProps.backgroundColor,
+        durationFadeIn = _convertProps.durationFadeIn,
+        Tag = _convertProps.Tag,
+        itemProp = _convertProps.itemProp,
+        loading = _convertProps.loading,
+        draggable = _convertProps.draggable;
+
+    var shouldReveal = this.state.fadeIn === false || this.state.imgLoaded;
+    var shouldFadeIn = this.state.fadeIn === true && !this.state.imgCached;
+    var imageStyle = (0, _extends2.default)({
+      opacity: shouldReveal ? 1 : 0,
+      transition: shouldFadeIn ? "opacity " + durationFadeIn + "ms" : "none"
+    }, imgStyle);
+    var bgColor = typeof backgroundColor === "boolean" ? "lightgray" : backgroundColor;
+    var delayHideStyle = {
+      transitionDelay: durationFadeIn + "ms"
+    };
+    var imagePlaceholderStyle = (0, _extends2.default)({
+      opacity: this.state.imgLoaded ? 0 : 1
+    }, shouldFadeIn && delayHideStyle, imgStyle, placeholderStyle);
+    var placeholderImageProps = {
+      title: title,
+      alt: !this.state.isVisible ? alt : "",
+      style: imagePlaceholderStyle,
+      className: placeholderClassName,
+      itemProp: itemProp
+    };
+
+    if (fluid) {
+      var imageVariants = fluid;
+      var image = getCurrentSrcData(fluid);
+      return /*#__PURE__*/_react.default.createElement(Tag, {
+        className: (className ? className : "") + " gatsby-image-wrapper",
+        style: (0, _extends2.default)({
+          position: "relative",
+          overflow: "hidden",
+          maxWidth: image.maxWidth ? image.maxWidth + "px" : null,
+          maxHeight: image.maxHeight ? image.maxHeight + "px" : null
+        }, style),
+        ref: this.handleRef,
+        key: "fluid-" + JSON.stringify(image.srcSet)
+      }, /*#__PURE__*/_react.default.createElement(Tag, {
+        "aria-hidden": true,
+        style: {
+          width: "100%",
+          paddingBottom: 100 / image.aspectRatio + "%"
+        }
+      }), bgColor && /*#__PURE__*/_react.default.createElement(Tag, {
+        "aria-hidden": true,
+        title: title,
+        style: (0, _extends2.default)({
+          backgroundColor: bgColor,
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          opacity: !this.state.imgLoaded ? 1 : 0,
+          right: 0,
+          left: 0
+        }, shouldFadeIn && delayHideStyle)
+      }), image.base64 && /*#__PURE__*/_react.default.createElement(Placeholder, {
+        ariaHidden: true,
+        ref: this.placeholderRef,
+        src: image.base64,
+        spreadProps: placeholderImageProps,
+        imageVariants: imageVariants,
+        generateSources: generateBase64Sources
+      }), image.tracedSVG && /*#__PURE__*/_react.default.createElement(Placeholder, {
+        ariaHidden: true,
+        ref: this.placeholderRef,
+        src: image.tracedSVG,
+        spreadProps: placeholderImageProps,
+        imageVariants: imageVariants,
+        generateSources: generateTracedSVGSources
+      }), this.state.isVisible && /*#__PURE__*/_react.default.createElement("picture", null, generateImageSources(imageVariants), /*#__PURE__*/_react.default.createElement(Img, {
+        alt: alt,
+        title: title,
+        sizes: image.sizes,
+        src: image.src,
+        crossOrigin: this.props.crossOrigin,
+        srcSet: image.srcSet,
+        style: imageStyle,
+        ref: this.imageRef,
+        onLoad: this.handleImageLoaded,
+        onError: this.props.onError,
+        itemProp: itemProp,
+        loading: loading,
+        draggable: draggable
+      })), this.addNoScript && /*#__PURE__*/_react.default.createElement("noscript", {
+        dangerouslySetInnerHTML: {
+          __html: noscriptImg((0, _extends2.default)({
+            alt: alt,
+            title: title,
+            loading: loading
+          }, image, {
+            imageVariants: imageVariants
+          }))
+        }
+      }));
+    }
+
+    if (fixed) {
+      var _imageVariants = fixed;
+
+      var _image = getCurrentSrcData(fixed);
+
+      var divStyle = (0, _extends2.default)({
+        position: "relative",
+        overflow: "hidden",
+        display: "inline-block",
+        width: _image.width,
+        height: _image.height
+      }, style);
+
+      if (style.display === "inherit") {
+        delete divStyle.display;
+      }
+
+      return /*#__PURE__*/_react.default.createElement(Tag, {
+        className: (className ? className : "") + " gatsby-image-wrapper",
+        style: divStyle,
+        ref: this.handleRef,
+        key: "fixed-" + JSON.stringify(_image.srcSet)
+      }, bgColor && /*#__PURE__*/_react.default.createElement(Tag, {
+        "aria-hidden": true,
+        title: title,
+        style: (0, _extends2.default)({
+          backgroundColor: bgColor,
+          width: _image.width,
+          opacity: !this.state.imgLoaded ? 1 : 0,
+          height: _image.height
+        }, shouldFadeIn && delayHideStyle)
+      }), _image.base64 && /*#__PURE__*/_react.default.createElement(Placeholder, {
+        ariaHidden: true,
+        ref: this.placeholderRef,
+        src: _image.base64,
+        spreadProps: placeholderImageProps,
+        imageVariants: _imageVariants,
+        generateSources: generateBase64Sources
+      }), _image.tracedSVG && /*#__PURE__*/_react.default.createElement(Placeholder, {
+        ariaHidden: true,
+        ref: this.placeholderRef,
+        src: _image.tracedSVG,
+        spreadProps: placeholderImageProps,
+        imageVariants: _imageVariants,
+        generateSources: generateTracedSVGSources
+      }), this.state.isVisible && /*#__PURE__*/_react.default.createElement("picture", null, generateImageSources(_imageVariants), /*#__PURE__*/_react.default.createElement(Img, {
+        alt: alt,
+        title: title,
+        width: _image.width,
+        height: _image.height,
+        sizes: _image.sizes,
+        src: _image.src,
+        crossOrigin: this.props.crossOrigin,
+        srcSet: _image.srcSet,
+        style: imageStyle,
+        ref: this.imageRef,
+        onLoad: this.handleImageLoaded,
+        onError: this.props.onError,
+        itemProp: itemProp,
+        loading: loading,
+        draggable: draggable
+      })), this.addNoScript && /*#__PURE__*/_react.default.createElement("noscript", {
+        dangerouslySetInnerHTML: {
+          __html: noscriptImg((0, _extends2.default)({
+            alt: alt,
+            title: title,
+            loading: loading
+          }, _image, {
+            imageVariants: _imageVariants
+          }))
+        }
+      }));
+    }
+
+    return null;
+  };
+
+  return Image;
+}(_react.default.Component);
+
+Image.defaultProps = {
+  fadeIn: true,
+  durationFadeIn: 500,
+  alt: "",
+  Tag: "div",
+  // We set it to `lazy` by default because it's best to default to a performant
+  // setting and let the user "opt out" to `eager`
+  loading: "lazy"
+};
+
+var fixedObject = _propTypes.default.shape({
+  width: _propTypes.default.number.isRequired,
+  height: _propTypes.default.number.isRequired,
+  src: _propTypes.default.string.isRequired,
+  srcSet: _propTypes.default.string.isRequired,
+  base64: _propTypes.default.string,
+  tracedSVG: _propTypes.default.string,
+  srcWebp: _propTypes.default.string,
+  srcSetWebp: _propTypes.default.string,
+  media: _propTypes.default.string
+});
+
+var fluidObject = _propTypes.default.shape({
+  aspectRatio: _propTypes.default.number.isRequired,
+  src: _propTypes.default.string.isRequired,
+  srcSet: _propTypes.default.string.isRequired,
+  sizes: _propTypes.default.string.isRequired,
+  base64: _propTypes.default.string,
+  tracedSVG: _propTypes.default.string,
+  srcWebp: _propTypes.default.string,
+  srcSetWebp: _propTypes.default.string,
+  media: _propTypes.default.string,
+  maxWidth: _propTypes.default.number,
+  maxHeight: _propTypes.default.number
+});
+
+function requireFixedOrFluid(originalPropTypes) {
+  return function (props, propName, componentName) {
+    var _PropTypes$checkPropT;
+
+    if (!props.fixed && !props.fluid) {
+      throw new Error("The prop `fluid` or `fixed` is marked as required in `" + componentName + "`, but their values are both `undefined`.");
+    }
+
+    _propTypes.default.checkPropTypes((_PropTypes$checkPropT = {}, _PropTypes$checkPropT[propName] = originalPropTypes, _PropTypes$checkPropT), props, "prop", componentName);
+  };
+} // If you modify these propTypes, please don't forget to update following files as well:
+// https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/index.d.ts
+// https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-image/README.md#gatsby-image-props
+// https://github.com/gatsbyjs/gatsby/blob/master/docs/docs/gatsby-image.md#gatsby-image-props
+
+
+Image.propTypes = {
+  resolutions: fixedObject,
+  sizes: fluidObject,
+  fixed: requireFixedOrFluid(_propTypes.default.oneOfType([fixedObject, _propTypes.default.arrayOf(fixedObject)])),
+  fluid: requireFixedOrFluid(_propTypes.default.oneOfType([fluidObject, _propTypes.default.arrayOf(fluidObject)])),
+  fadeIn: _propTypes.default.bool,
+  durationFadeIn: _propTypes.default.number,
+  title: _propTypes.default.string,
+  alt: _propTypes.default.string,
+  className: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  // Support Glamor's css prop.
+  critical: _propTypes.default.bool,
+  crossOrigin: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  style: _propTypes.default.object,
+  imgStyle: _propTypes.default.object,
+  placeholderStyle: _propTypes.default.object,
+  placeholderClassName: _propTypes.default.string,
+  backgroundColor: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  onLoad: _propTypes.default.func,
+  onError: _propTypes.default.func,
+  onStartLoad: _propTypes.default.func,
+  Tag: _propTypes.default.string,
+  itemProp: _propTypes.default.string,
+  loading: _propTypes.default.oneOf(["auto", "lazy", "eager"]),
+  draggable: _propTypes.default.bool
+};
+var _default = Image;
+exports.default = _default;
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_assertThisInitialized2, "_assertThisInitialized2", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_inheritsLoose2, "_inheritsLoose2", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_objectWithoutPropertiesLoose2, "_objectWithoutPropertiesLoose2", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_extends2, "_extends2", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_react, "_react", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_propTypes, "_propTypes", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(logDeprecationNotice, "logDeprecationNotice", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(convertProps, "convertProps", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(hasArtDirectionSupport, "hasArtDirectionSupport", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(matchesMedia, "matchesMedia", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(getImageCacheKey, "getImageCacheKey", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(getCurrentSrcData, "getCurrentSrcData", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(imageCache, "imageCache", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(inImageCache, "inImageCache", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(activateCacheForImage, "activateCacheForImage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(hasNativeLazyLoadSupport, "hasNativeLazyLoadSupport", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(isBrowser, "isBrowser", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(hasIOSupport, "hasIOSupport", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(io, "io", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(listeners, "listeners", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(getIO, "getIO", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(generateImageSources, "generateImageSources", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(groupByMedia, "groupByMedia", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(generateTracedSVGSources, "generateTracedSVGSources", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(generateBase64Sources, "generateBase64Sources", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(generateNoscriptSource, "generateNoscriptSource", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(generateNoscriptSources, "generateNoscriptSources", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(listenToIntersections, "listenToIntersections", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(noscriptImg, "noscriptImg", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(Placeholder, "Placeholder", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(Img, "Img", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(Image, "Image", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(fixedObject, "fixedObject", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(fluidObject, "fluidObject", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(requireFixedOrFluid, "requireFixedOrFluid", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+  reactHotLoader.register(_default, "_default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\node_modules\\gatsby-image\\index.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
@@ -87243,6 +88042,166 @@ var _default = Content;
 
 /***/ }),
 
+/***/ "./src/components/Features.js":
+/*!************************************!*\
+  !*** ./src/components/Features.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PreviewCompatibleImage */ "./src/components/PreviewCompatibleImage.js");
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Features.js";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+
+
+var FeatureGrid = function FeatureGrid(_ref) {
+  var gridItems = _ref.gridItems;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "columns is-multiline",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 3
+    }
+  }, gridItems.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: item.packagetype,
+      className: "column is-6",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "section",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "has-text-centered",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        width: '240px',
+        display: 'inline-block'
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PreviewCompatibleImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      imageInfo: item,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 15
+      }
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "has-text-centered",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 13
+      }
+    }, item.packagetype)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 13
+      }
+    }, item.text.map(function (info) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        key: info.package,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 15
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "is-size-7",
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 17
+        }
+      }, info.package));
+    }))));
+  }));
+};
+
+FeatureGrid.propTypes = {
+  gridItems: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    image: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]),
+    text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  }))
+};
+var _default = FeatureGrid;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(FeatureGrid, "FeatureGrid", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Features.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Features.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./src/components/Footer.js":
 /*!**********************************!*\
   !*** ./src/components/Footer.js ***!
@@ -87767,8 +88726,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _img_logo_logo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/logo/logo.svg */ "./src/img/logo/logo.svg");
-/* harmony import */ var _img_logo_logo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_logo_logo_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/logo/logo_grey.svg */ "./src/img/logo/logo_grey.svg");
+/* harmony import */ var _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3__);
 
 
 var _temp,
@@ -87861,7 +88820,7 @@ var Navbar = (_temp = /*#__PURE__*/function (_React$Component) {
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-      src: _img_logo_logo_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      src: _img_logo_logo_grey_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
       alt: "Coach Goodenough",
       style: {
         width: '88px'
@@ -87924,11 +88883,20 @@ var Navbar = (_temp = /*#__PURE__*/function (_React$Component) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       className: "navbar-item",
-      to: "/about",
+      to: "/",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 62,
+        columnNumber: 15
+      }
+    }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      className: "navbar-item",
+      to: "/about",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65,
         columnNumber: 15
       }
     }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -87937,16 +88905,16 @@ var Navbar = (_temp = /*#__PURE__*/function (_React$Component) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 68,
         columnNumber: 15
       }
-    }, "Packages and Testimonials"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    }, "Packages"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       className: "navbar-item",
       to: "/contact",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 71,
         columnNumber: 15
       }
     }, "Contact")))));
@@ -87985,10 +88953,10 @@ var _default = Navbar;
 
 /***/ }),
 
-/***/ "./src/components/Pricing.js":
-/*!***********************************!*\
-  !*** ./src/components/Pricing.js ***!
-  \***********************************/
+/***/ "./src/components/PreviewCompatibleImage.js":
+/*!**************************************************!*\
+  !*** ./src/components/PreviewCompatibleImage.js ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87998,8 +88966,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js";
+    _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\PreviewCompatibleImage.js";
 
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -88013,89 +88983,68 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
-var Pricing = function Pricing(_ref) {
-  var data = _ref.data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "columns",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 3
-    }
-  }, data.map(function (price) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: price.plan,
-      className: "column",
+
+var PreviewCompatibleImage = function PreviewCompatibleImage(_ref) {
+  var imageInfo = _ref.imageInfo;
+  var imageStyle = {
+    borderRadius: '5px'
+  };
+  var _imageInfo$alt = imageInfo.alt,
+      alt = _imageInfo$alt === void 0 ? '' : _imageInfo$alt,
+      childImageSharp = imageInfo.childImageSharp,
+      image = imageInfo.image;
+
+  if (!!image && !!image.childImageSharp) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      style: imageStyle,
+      fluid: image.childImageSharp.fluid,
+      alt: alt,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7,
+        lineNumber: 11,
         columnNumber: 7
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-      className: "section",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8,
-        columnNumber: 9
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-      className: "is-size-2 has-text-centered has-text-weight-semibold",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9,
-        columnNumber: 11
-      }
-    }, price.plan), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-      className: "is-size-1 has-text-weight-bold has-text-info-link has-text-centered",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 11
-      }
-    }, "$", price.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      className: "has-text-weight-semibold",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 11
-      }
-    }, price.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    });
+  }
+
+  if (!!childImageSharp) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      style: imageStyle,
+      fluid: childImageSharp.fluid,
+      alt: alt,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 16,
-        columnNumber: 11
+        columnNumber: 12
       }
-    }, price.items.map(function (item) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: item,
-        className: "is-size-5",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 15
-        }
-      }, item);
-    }))));
-  }));
+    });
+  }
+
+  if (!!image && typeof image === 'string') return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: imageStyle,
+    src: image,
+    alt: alt,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 12
+    }
+  });
+  return null;
 };
 
-Pricing.propTypes = {
-  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
-    plan: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-    price: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number]),
-    description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-    items: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
-  }))
+PreviewCompatibleImage.propTypes = {
+  imageInfo: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    alt: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+    childImageSharp: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+    image: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]).isRequired,
+    style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  }).isRequired
 };
-var _default = Pricing;
+var _default = PreviewCompatibleImage;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
 ;
 
@@ -88106,8 +89055,8 @@ var _default = Pricing;
     return;
   }
 
-  reactHotLoader.register(Pricing, "Pricing", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\Pricing.js");
+  reactHotLoader.register(PreviewCompatibleImage, "PreviewCompatibleImage", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\PreviewCompatibleImage.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\components\\PreviewCompatibleImage.js");
 })();
 
 ;
@@ -88186,23 +89135,12 @@ var _default = useSiteMetadata;
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1600891388491
+      // 1600910029678
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
     }
   
-
-/***/ }),
-
-/***/ "./src/img/logo/logo.svg":
-/*!*******************************!*\
-  !*** ./src/img/logo/logo.svg ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/logo-95cd3c4ddd99a74f0ab55744275a0160.svg";
 
 /***/ }),
 
@@ -88303,8 +89241,8 @@ var AboutPageTemplate = function AboutPageTemplate(_ref) {
     className: "has-text-weight-bold is-size-1",
     style: {
       borderColor: "white",
-      boxShadow: '1px 1px 1px #138fcd, 1px 1px 1px #138fcd',
-      backgroundColor: '#138fcd',
+      boxShadow: '1px 1px 1px #408697, 1px 1px 1px #408697',
+      backgroundColor: '#408697',
       color: 'white',
       opacity: '0.75',
       padding: '1rem'
@@ -88714,9 +89652,7 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
       title = _ref.title,
       heading = _ref.heading,
       subheading = _ref.subheading,
-      mainpitch = _ref.mainpitch,
-      description = _ref.description,
-      intro = _ref.intro;
+      mainpitch = _ref.mainpitch;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: _this,
     __source: {
@@ -88755,8 +89691,8 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen",
     style: {
-      boxShadow: '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
-      backgroundColor: '#138fcd',
+      boxShadow: '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
+      backgroundColor: '#408697',
       opacity: '0.85',
       color: 'white',
       lineHeight: '1',
@@ -88771,8 +89707,8 @@ var IndexPageTemplate = function IndexPageTemplate(_ref) {
   }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen",
     style: {
-      boxShadow: '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
-      backgroundColor: '#138fcd',
+      boxShadow: '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
+      backgroundColor: '#408697',
       opacity: '0.85',
       color: 'white',
       lineHeight: '1',
@@ -89022,7 +89958,7 @@ IndexPage.propTypes = {
 };
 var _default = IndexPage;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
-var pageQuery = "1879690877";
+var pageQuery = "2587797371";
 ;
 
 (function () {
@@ -89065,7 +90001,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
-/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Pricing */ "./src/components/Pricing.js");
+/* harmony import */ var _components_Features__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Features */ "./src/components/Features.js");
 var _this = undefined,
     _jsxFileName = "C:\\Users\\doubleohseven\\Documents\\Website Files\\goodenoughpt\\src\\templates\\product-page.js";
 
@@ -89081,18 +90017,18 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
- //import Features from '../components/Features'
-//import Testimonials from '../components/Testimonials'
 
- //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+ //import Testimonials from '../components/Testimonials'
+//import Pricing from '../components/Pricing'
+//import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 var ProductPageTemplate = function ProductPageTemplate(_ref) {
   var image = _ref.image,
       title = _ref.title,
       heading = _ref.heading,
       description = _ref.description,
-      fullImage = _ref.fullImage,
-      pricing = _ref.pricing;
+      intro = _ref.intro,
+      fullImage = _ref.fullImage;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content",
     __self: _this,
@@ -89117,8 +90053,8 @@ var ProductPageTemplate = function ProductPageTemplate(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "has-text-weight-bold is-size-1",
     style: {
-      boxShadow: '0.5rem 0 0 #138fcd, -0.5rem 0 0 #138fcd',
-      backgroundColor: '#138fcd',
+      boxShadow: '0.5rem 0 0 #408697, -0.5rem 0 0 #408697',
+      backgroundColor: '#408697',
       opacity: '0.75',
       color: 'white',
       padding: '1rem'
@@ -89217,7 +90153,56 @@ var ProductPageTemplate = function ProductPageTemplate(_ref) {
       lineNumber: 59,
       columnNumber: 17
     }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Features__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    gridItems: intro.blurbs,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 19
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "column is-12 is-offest-1 has-text-centered ",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 19
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    className: "btn is-medium",
+    to: "https://www.zerv.io/",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 80
+    }
+  }, "Book an appointment")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "columns",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 19
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "column is-7",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 21
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "has-text-weight-semibold is-size-3",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 23
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "full-width-image-container",
     style: {
       backgroundImage: "url(" + (fullImage.childImageSharp ? fullImage.childImageSharp.fluid.src : fullImage) + ")"
@@ -89225,31 +90210,7 @@ var ProductPageTemplate = function ProductPageTemplate(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
-      columnNumber: 19
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "has-text-weight-semibold is-size-2",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99,
-      columnNumber: 19
-    }
-  }, pricing.heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "is-size-5",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 102,
-      columnNumber: 19
-    }
-  }, pricing.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    data: pricing.plans,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 95,
       columnNumber: 19
     }
   })))))));
@@ -89285,7 +90246,7 @@ var ProductPage = function ProductPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 145,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProductPageTemplate, {
@@ -89301,7 +90262,7 @@ var ProductPage = function ProductPage(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 146,
       columnNumber: 7
     }
   }));
@@ -89316,7 +90277,7 @@ ProductPage.propTypes = {
 };
 var _default = ProductPage;
 /* harmony default export */ __webpack_exports__["default"] = (_default);
-var productPageQuery = "3222945986";
+var productPageQuery = "1617780254";
 ;
 
 (function () {

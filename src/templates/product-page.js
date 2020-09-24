@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-//import Features from '../components/Features'
+import Features from '../components/Features'
 //import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
+//import Pricing from '../components/Pricing'
 //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
@@ -12,11 +12,11 @@ export const ProductPageTemplate = ({
   title,
   heading,
   description,
-  //intro,
+  intro,
   //main,
   //testimonials,
   fullImage,
-  pricing,
+  //pricing,
 }) => {
     return (
       <div className="content">
@@ -32,8 +32,8 @@ export const ProductPageTemplate = ({
           <h2
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #138fcd, -0.5rem 0 0 #138fcd',
-              backgroundColor: '#138fcd',
+              boxShadow: '0.5rem 0 0 #408697, -0.5rem 0 0 #408697',
+              backgroundColor: '#408697',
               opacity: '0.75',
               color: 'white',
               padding: '1rem',
@@ -49,24 +49,28 @@ export const ProductPageTemplate = ({
                 <div className="column is-12 is-offset-1">
                   <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
                   <p>{description}</p>                    
-                </div>
+                </div> 
                 <div className="column is-12 is-offest-1 has-text-centered "><Link className="btn" to="https://www.zerv.io/">
                       Book an appointment
                     </Link>
-                </div>
+                  </div>               
               </div>
               <div className="columns">
                 <div className="column is-10 is-offset-1">
-                  {/*<Features gridItems={intro.blurbs} />
+                  <Features gridItems={intro.blurbs} />
+                  <div className="column is-12 is-offest-1 has-text-centered "><Link className="btn is-medium" to="https://www.zerv.io/">
+                      Book an appointment
+                    </Link>
+                  </div>
                   <div className="columns">
                     <div className="column is-7">
                       <h3 className="has-text-weight-semibold is-size-3">
-                        {main.heading}
+                      {/* {main.heading} */}
                       </h3>
-                      <p>{main.description}</p>
+                      {/* <p>{main.description}</p> */}
                     </div>
                   </div>
-                  <div className="tile is-ancestor">
+                  {/* <div className="tile is-ancestor">
                     <div className="tile is-vertical">
                       <div className="tile">
                         <div className="tile is-parent is-vertical">
@@ -86,8 +90,8 @@ export const ProductPageTemplate = ({
                         </article>
                       </div>
                     </div>
-                  </div>
-                  <Testimonials testimonials={testimonials} /> */}
+                  </div> */}
+                  {/* <Testimonials testimonials={testimonials} /> */}
                   <div
                     className="full-width-image-container"
                     style={{
@@ -96,11 +100,11 @@ export const ProductPageTemplate = ({
                           ? fullImage.childImageSharp.fluid.src
                           : fullImage})`,
                     }} />
-                  <h2 className="has-text-weight-semibold is-size-2">
+                  {/*<h2 className="has-text-weight-semibold is-size-2">
                     {pricing.heading}
                   </h2>
                   <p className="is-size-5">{pricing.description}</p>
-                  <Pricing data={pricing.plans} />
+                  <Pricing data={pricing.plans} /> */}
                   </div>
                 </div>
               </div>
@@ -187,7 +191,11 @@ export const productPageQuery = graphql`
                 }
               }
             }
-            text
+            packagetype
+            text {
+              package
+            }
+
           }
           heading
           description

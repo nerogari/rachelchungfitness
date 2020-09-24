@@ -16,7 +16,7 @@ body {
   justify-content: left;
   align-items: center; }
   .content .taglist li {
-    padding: 0 2rem 1rem 0;
+    padding: 0rem 2rem 1rem 0rem;
     margin-bottom: 1.5rem;
     margin-top: 0; }
 
@@ -52,10 +52,10 @@ body {
   border-radius: .25rem;
   text-decoration: none;
   font-weight: 700;
-  color: #138fcd;
+  color: #408697;
   text-align: center;
   position: center;
-  box-shadow: inset 0 0 0 2px #138fcd;
+  box-shadow: inset 0 0 0 2px #408697;
   transition: all .15s ease; }
 
 .margin-top-0 {
@@ -72,7 +72,7 @@ body {
 
 footer.footer {
   padding: 3rem 0rem 0rem;
-  background-color: #138fcd; }
+  background-color: #408697; }
 
 .menu-label {
   font-size: 1em !important;

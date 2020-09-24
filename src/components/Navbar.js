@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo/logo.svg'
+import logo from '../img/logo/logo_grey.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -59,11 +59,14 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
+              <Link className="navbar-item" to="/">
+                Home
+              </Link>
               <Link className="navbar-item" to="/about">
                 About
               </Link> 
               <Link className="navbar-item" to="/products">
-                Packages and Testimonials
+                Packages
               </Link>    
               <Link className="navbar-item" to="/contact">
                 Contact

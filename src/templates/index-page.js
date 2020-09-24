@@ -11,8 +11,8 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
-  description,
-  intro,
+  //description,
+  //intro,
 }) => (
   <div>
     <div
@@ -39,8 +39,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
-            backgroundColor: '#138fcd',
+              '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
+            backgroundColor: '#408697',
             opacity: '0.85',
             color: 'white',
             lineHeight: '1',
@@ -53,8 +53,8 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              '#138fcd 0.5rem 0px 0px, #138fcd -0.5rem 0px 0px',
-            backgroundColor: '#138fcd',
+              '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
+            backgroundColor: '#408697',
             opacity: '0.85',
             color: 'white',
             lineHeight: '1',
@@ -189,7 +189,10 @@ export const pageQuery = graphql`
                 }
               }
             }
-            text
+            packagetype
+            text {
+              package
+            }
           }
           heading
           description
