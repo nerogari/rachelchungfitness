@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Coach Goodenough',
+    title: 'Rachel Chung Fitness',
     description: 'Personal training and health fitness',
     author: 'ngarces',
   },
@@ -73,6 +73,12 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: "gatsby-plugin-typography",
+      options: {
+        pathToConfigModule: "src/typography.js",      
+      },
+    }, 
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

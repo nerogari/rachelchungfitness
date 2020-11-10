@@ -25,10 +25,11 @@ export const ProductPageTemplate = ({
           style={{
             backgroundImage: `url(${
               !!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center"
+            backgroundPosition: "100% 25%",
+            height: '27vw'
           }}
         >
+          {/* Commenting out banner caption
           <h2
             className="has-text-weight-bold is-size-1"
             style={{
@@ -40,7 +41,7 @@ export const ProductPageTemplate = ({
             }}
           >
             {title}
-          </h2>
+          </h2> */}          
         </div>
         <section className="section section--gradient">
           <div className="container">
@@ -50,10 +51,12 @@ export const ProductPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
                   <p>{description}</p>                    
                 </div> 
-                <div className="column is-12 is-offest-1 has-text-centered "><Link className="btn" to="https://www.zerv.io/">
+                {/* commenting out appointment button
+                <div className="column is-12 is-offest-1 has-text-centered ">
+                  <Link className="btn" to="https://www.zerv.io/">
                       Book an appointment
-                    </Link>
-                  </div>               
+                  </Link>
+                </div> */}            
               </div>
               <div className="columns">
                 <div className="column is-10 is-offset-1">
@@ -92,7 +95,7 @@ export const ProductPageTemplate = ({
                     </div>
                   </div> */}
                   {/* <Testimonials testimonials={testimonials} /> */}
-                  <div
+                  {/*<div
                     className="full-width-image-container"
                     style={{
                       backgroundImage: `url(${

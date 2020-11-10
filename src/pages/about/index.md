@@ -1,14 +1,20 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About me
-image: /img/about_banner2.jpg
+title: About myself
+image: /img/about_banner.jpg
 ---
-### Personal Training and Fitness  
-Hi, I’m Sarah! I am a Personal Trainer and Nutrition Coach in the Toronto area. I am here to help educate, inspire and guide you through your fitness journey. Strength & conditioning, nutrition and sleep are all vital contributors toward how we live and enjoy our daily lives. I am passionate about helping my clients improve their strength, endurance, speed and power, optimize their movement patterns, improve their health but most importantly elevate their overall quality of life. It’s time to take the reigns of your health and fitness, prioritize yourself and get the most out of each and every day!
 
-### Qualifications and Certifications
-Honors Bachelor of Science, UofT. Health & Disease, Physiology & Psychology
-NSCA-Certified Personal Trainer
-Precision Nutrition Level 1 Certified Coach
-Specialties: Strength & conditioning programming, injury prevention, mobility & flexibility, kettlebell althetics, trigger-point therapy. 
+My fitness journey began when I was 16 years old, I had a hectic home life and suffered a couple of sports injuries that kept me from playing on high school sports teams. Frustrated that I was unable to play, I began taking an interest in exercise where I used the workouts as an escape to clear my mind and stay in shape. I found it helped so much that I started to treat exercise as a form of therapy! Whether I was upset, angry, happy, or excited, I used the gym as a way to help focus my energy in a positive way. Years later I decided to attend post-secondary school to become a personal trainer. I began to come to realized that fitness is more than just fitting into your favorite pair of jeans or having a big booty and a tight waist. It was about how you felt about yourself after and how exercise positively contributed to your overall mental health. It was about taking care of yourself and giving yourself confidence to achieve your goals. That’s when I had a moment of thought, “How do we define what fitness is? “What is defined as fit”, “Can fitness be defined as super skinny, or tight abs?” 
+
+## Credentials
+• Georgebrown College: Fitness & Lifestyle Management  
+• Varsity soccer player (Former)  
+• Ryerson University: B’com Marketing & Entrepreneurship  
+• CSEP-CPT: Canadian Society for Exercise Physiology (Former)  
+• OFC: Ontario Fitness Council (Current)  
+• Bellies Inc. Pre & Post Natal  
+• FMS: Level 1  
+• TRX Suspension Training  
+• CPR/AED & First Aid Certification  
+

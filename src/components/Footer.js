@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo/logo_grey.svg'
+import logo from '../img/logo/Logo.png'
 import instagram from '../img/social/instagram.svg'
 import facebook from '../img/social/facebook.svg'
 
@@ -13,7 +13,7 @@ const Footer = class extends React.Component {
           <img
             src={logo}
             alt="logo"
-            style={{ width: '14em', height: '10em' }}
+            style={{ width: '14em', height: '14em' }}
           />
         </div>
         <div className="content">
@@ -23,23 +23,23 @@ const Footer = class extends React.Component {
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
-                      <Link to="/" className="navbar-item">
-                        Home
+                      <Link to="/" className="navbar-item is-family-primary">
+                        HOME
+                      </Link> 
+                    </li>
+                    <li>
+                      <Link className="navbar-item is-family-primary" to="/about">
+                        ABOUT
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Packages and Testimonials
+                      <Link className="navbar-item is-family-primary" to="/products">
+                        PACKAGES
                       </Link>
                     </li>                  
                     <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
+                      <Link className="navbar-item is-family-primary" to="/contact">
+                        CONTACT
                       </Link>
                     </li>
                   </ul>
@@ -51,14 +51,14 @@ const Footer = class extends React.Component {
                   <img
                     src={instagram}
                     alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
+                    style={{ width: '1em', height: '1em', marginBottom: "0px" }}
                   />                
                 </a> 
                 <a title="facebook" href="https://www.facebook.com/goodenoughpt">
                   <img
                     src={facebook}
                     alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
+                    style={{ width: '1em', height: '1em', marginBottom: "0px" }}
                   />
                 </a>                
               </div>

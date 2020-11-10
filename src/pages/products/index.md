@@ -2,40 +2,40 @@
 templateKey: 'product-page'
 path: /products
 title: Packages and Testimonials
-image: /img/packages_banner.jpg
-heading: Services offered  
+image: /img/packages.jpg
+heading: Training Packages 
 description: >-
-  Find me on Zerv and book your appointment today!
+  Choose the training package that best suits your needs
 intro:
   blurbs:
-    - image: /img/laugh.jpg
-      packagetype: "Introductory Package - 2hrs: (New clients only) $80"
+    - image: /img/packages.jpg
+      packagetype: "First package"
       text: 
-        - package: Complimentary Movement Assessment & Goal Setting discussion
-        - package: Week 1, Day 1 of your program. This is a great opportunity to taste-test Personalized Training without the commitment. Experience customized programming, superior-level coaching, and learn how to train more effectively for continued success both in and outside of the gym. Once our session is complete we will spend some time going over your program and discuss what your future training will look like, what you can expect from me, and what programming option best suits your needs.
-    - image: /img/about.jpg
-      packagetype: Gym Training (388 Carlaw OR 682 Huron St.)
+        - package: Short description
+        - package: More descriptions
+    - image: /img/packages.jpg
+      packagetype: Gym Training
       text: 
-        - package: 6 Session Program      $720    ($120 per session)
-        - package: 12 Session Program     $1380   ($115 per session)
-        - package: 24 Session Program     $2640   ($110 per session)
-    - image: /img/downward.jpg
+        - package: 6 Session Program
+        - package: 12 Session Program
+        - package: 24 Session Program
+    - image: /img/packages.jpg
       packagetype: In-Home Personal Training
       text: 
         - package: Please contact me directly for pricing and package options. 
-    - image: /img/overhead_press.jpg
-      packagetype: Monthly Program & Nutrition Coaching $250/mo
+    - image: /img/packages.jpg
+      packagetype: Monthly Program & Nutrition Coaching
       text: 
-        - package: 4 week, 2x per week customized strength training program
-        - package: 4 week, 2x per week customized conditioning program
-        - package: Bi-weekly phone or zoom calls to go discuss nutrition, form checks and any questions you may have
+        - package: Blah
+        - package: di
+        - package: Blah
   heading: What I offer
   description: >
     Wut
 main:
   heading: Great training with no compromises
   description: >
-    I hold my training to the highest standard as per certifications x x x blah blah blah
+    Training Packages
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/laugh.jpg

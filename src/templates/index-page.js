@@ -21,30 +21,27 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `50% 225%`,
-        backgroundAttachment: `fixed`,
+        backgroundAttachment: `center`,
+        position: 'center',
+        width: '100vw',
+        height: '27vw',        
       }}
     >
       <div
         style={{
           display: 'flex',
           height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
+          lineHeight: '1',          
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
-            backgroundColor: '#408697',
-            opacity: '0.85',
-            color: 'white',
+            color: '#0D1B46',
             lineHeight: '1',
-            padding: '0.25em',
+            padding: '0.25em',               
           }}
         >
           {title}
@@ -52,11 +49,7 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              '#408697 0.5rem 0px 0px, #408697 -0.5rem 0px 0px',
-            backgroundColor: '#408697',
-            opacity: '0.85',
-            color: 'white',
+            color: '#0D1B46',
             lineHeight: '1',
             padding: '0.25em',
           }}
@@ -80,6 +73,7 @@ export const IndexPageTemplate = ({
                   </div>
                   <div className="tile">                                          
                     <div className="columns">
+                      {/*Commenting out Sarah's list
                       <section className="section">
                         <ul>
                           {mainpitch.points.map((blurb) => (      
@@ -87,23 +81,24 @@ export const IndexPageTemplate = ({
                               <li>{blurb.pointslist}</li>                            
                             </div>     
                           ))}
-                        </ul>
-                      </section>
+                          </ul>
+                      </section> */}
                     </div>                 
                   </div>
                 </div>
                 <div className="columns">
                   <div className="column is-12">
+                    {/* Commenting out Services Offered subheading
                     <h1 className="has-text-weight-semibold">
                       {heading}
-                    </h1>
+                    </h1> */}
                   </div>
                 </div>
                 {/*<Features gridItems={intro.blurbs} />*/}
                 <div className="columns">
-                  <div className="column is-12 has-text-centered background-color-white">
+                  <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
-                      See All Services
+                      Training Packages
                     </Link>
                   </div>
                 </div>                

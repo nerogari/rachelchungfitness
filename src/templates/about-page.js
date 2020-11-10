@@ -15,32 +15,29 @@ export const AboutPageTemplate = ({ image, title, content, contentComponent }) =
            backgroundImage: `url(${
              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
            })`,
-           backgroundPosition: `center`,
-           backgroundAttachment: `fixed`,
+           backgroundPosition: `100% 25%`,
+           height: '27vw',
+
            }}
         >
-          <h2
+          {/*<h2 Commenting out banner caption
             className="has-text-weight-bold is-size-1"
             style={{
-              borderColor: "white",
-              boxShadow: '1px 1px 1px #408697, 1px 1px 1px #408697',
-              backgroundColor: '#408697',
-              color: 'white',
-              opacity: '0.75',
+              color: 'white',              
               padding: '1rem',
             }}
           >
             {title}
-          </h2>
+          </h2> */}
         </div>
             <section className="section section--gradient">
               <div className="container">
                 <div className="columns">
                   <div className="column is-10 is-offset-1">
                     <div className="section">
-                      <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                      <h1 className="title is-size-3 has-text-weight-bold is-bold-light">
                         {title}
-                     </h2>
+                     </h1>
                      <PageContent className="content" content={content} />
                     </div>
                   </div>

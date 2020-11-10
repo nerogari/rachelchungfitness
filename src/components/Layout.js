@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix('/')}img/logo./logo.svg`}
+          href={`${withPrefix('/')}img/logo/logo.svg`}
         />
         <link
           rel="icon"
@@ -38,10 +38,10 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/logo/logo.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#73939C" />
+        <meta name="theme-color" content="#F8777D" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content="Coach Goodenough" />
+        <meta property="og:title" content="Rachel Chung Fitness" />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
