@@ -3,7 +3,7 @@ templateKey: index-page
 title: Rachel Chung Fitness
 image: /img/home_banner.jpg
 heading: Services Offered
-subheading: Dad Bod Forever!
+subheading: Redefining your Workouts
 mainpitch:
   title: Why Redefine Fitness?
   description: >
