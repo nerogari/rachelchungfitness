@@ -3,7 +3,7 @@ templateKey: index-page
 title: Rachel Chung Fitness
 image: /img/home_banner.jpg
 heading: Services Offered
-subheading: Redefine your Workouts
+subheading: Redefine your Workout
 mainpitch:
   title: Why Redefine Fitness?
   description: >
