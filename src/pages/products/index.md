@@ -8,37 +8,38 @@ description: Choose the training package that best suits your needs
 intro:
   blurbs:
     - image: /img/packages.jpg
-      packagetype: "In-home Private, Family & Group Training "
+      packagetype: In-home Private, Family & Group Training (Virtual options available)
       text:
-        - package: "Customized workout plans that cater to your goals. "
-        - package: Available in 5, 10 & 20 session packages. Includes 1 free customized
-            home worko
-        - package: Packages include 1 free customized workout program based on equipment
-            availability, goals and body restrictions/injuries.
+        - package: "Programs available in 5, 10 & 20 session packages. "
+        - package: >
+            Each include 1 free customized workout program based on equipment
+            availability, injuries/restrictions & goals. 
+        - package: Contact me for pricing options
     - image: /img/packages.jpg
       packagetype: Do it yourself workouts
       text:
-        - package: "Package includes a 4-week customized workout program with weekly
-            check-in coaching.   "
-        - package: >
-            How it works: Complete in-take form, 45min initial consultation and
-            program delivery, followed by 3 weekly check-ins that will be used
-            for program adjustments/renewal, form & technique coaching and
-            questions. 
-        - package: "Some examples of programs include: Periodized sport specific training,
-            corrective/injury prevention, weight loos/sculpt & tone, booty
-            builder etc. "
+        - package: "4-week customized workout program. Includes initial
+            consultation/delivery (45min) and 4-weekly follow-up check-ins
+            (30min). "
+        - package: "Examples: Sport specific training i.e. speed training,
+            corrective/injury prevention, weight loss, sculpt & tone, booty
+            building ;) etc. "
+        - package: "Price: $250"
     - image: /img/packages.jpg
       packagetype: Virtual Fitness Classes
       text:
-        - package: "2 weekly fitness classes "
-        - package: "Virtual class membership is offered on the first of every month and
-            15th. "
+        - package: "Live virtual classes and recordings (e-mailed to you). Classes are
+            held Tuesday's & Thursday's 7PM EST. Workouts include Body sculpt,
+            HIIT, Plyometrics etc.  "
+        - package: |
+            Price: $60, 1 Month, 1st - 30th (31st) 
+        - package: "Price: $40, 2 Weeks, 15th - 30th (31st) "
     - image: /img/packages.jpg
       packagetype: Sampler Pack
       text:
-        - package: "Initial consultation, virtual fitness classes (2), private training
-            session (1).  "
+        - package: "Initial consultation (1), virtual fitness classes (2), private
+            training sessions (2).  "
+        - package: "Price: $150"
   heading: What I offer
   description: |
     Wut
