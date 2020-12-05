@@ -18,29 +18,27 @@ intro:
     - image: /img/packages.jpg
       packagetype: Do it yourself workouts
       text:
-        - package: "4-week customized workout program. "
-        - package: Includes 4 weekly check-ins for program adjustments, form & technique
-            coaching, and nutrition coaching.
-        - package: "Some examples of programs include: Periodization, corrective/injury
-            prevention, weight loos/sculpt & tone, customized sport specific
-            training programs & booty builder ;) "
-    - image: /img/packages.jpg
-      packagetype: "Redefine Fitness "
-      text:
-        - package: "Monthly define fitness program that covers all basis of the body.
-            Sculpting & toning with upper and lower body core and full-body fat
-            burner program. This one size fits all program is rotated monthly to
-            keep you challenged and exercising. Programs are renewed at the
-            first of every month. Included one - 30min zoom check-in for
-            questions and modifications based on equipment availability and
-            minor injuries and restrictions. "
+        - package: "Package includes a 4-week customized workout program with weekly
+            check-in coaching.   "
+        - package: >
+            How it works: Complete in-take form, 45min initial consultation and
+            program delivery, followed by 3 weekly check-ins that will be used
+            for program adjustments/renewal, form & technique coaching and
+            questions. 
+        - package: "Some examples of programs include: Periodized sport specific training,
+            corrective/injury prevention, weight loos/sculpt & tone, booty
+            builder etc. "
     - image: /img/packages.jpg
       packagetype: Virtual Fitness Classes
       text:
-        - package: "Virtual at-home fitnesses classes include HIIT, Full-body shred, Core,
-            Upperbody etc. "
-        - package: "Includes 3 weekly classes. "
-        - package: Blah
+        - package: "2 weekly fitness classes "
+        - package: "Virtual class membership is offered on the first of every month and
+            15th. "
+    - image: /img/packages.jpg
+      packagetype: Sampler Pack
+      text:
+        - package: "Initial consultation, virtual fitness classes (2), private training
+            session (1).  "
   heading: What I offer
   description: |
     Wut
