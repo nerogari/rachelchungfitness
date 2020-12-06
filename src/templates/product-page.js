@@ -61,10 +61,12 @@ export const ProductPageTemplate = ({
               <div className="columns">
                 <div className="column is-10 is-offset-1">
                   <Features gridItems={intro.blurbs} />
+                  {/* Commenting out button
                   <div className="column is-12 is-offest-1 has-text-centered "><Link className="btn is-medium" to="https://www.zerv.io/">
                       Book an appointment
                     </Link>
                   </div>
+                  */}
                   <div className="columns">
                     <div className="column is-7">
                       <h3 className="has-text-weight-semibold is-size-3">
