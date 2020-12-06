@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo/Logo.png'
+import logo from '../img/logo/logo.svg'
 import instagram from '../img/social/instagram.svg'
 import facebook from '../img/social/facebook.svg'
 
@@ -47,14 +47,14 @@ const Footer = class extends React.Component {
               </div>                       
               
               <div className="column is-3 social is-centered">       
-                <a title="instagram" href="https://instagram.com/goodenoughpt">
+                <a title="instagram" href="https://instagram.com/rachelchungfitness">
                   <img
                     src={instagram}
                     alt="Instagram"
                     style={{ width: '1em', height: '1em', marginBottom: "0px" }}
                   />                
                 </a> 
-                <a title="facebook" href="https://www.facebook.com/goodenoughpt">
+                <a title="facebook" href="https://www.facebook.com/rachelchungfitness">
                   <img
                     src={facebook}
                     alt="Facebook"
