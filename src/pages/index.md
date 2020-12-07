@@ -6,16 +6,15 @@ heading: Services Offered
 subheading: Redefine your Workout
 mainpitch:
   title: Why Redefine Fitness?
-  description: >
-    Redefining fitness is about a lifestyle choice, it is about choosing
-    methodologies that best suit your needs as a human being. There is no
+  description: "Redefining fitness is about a lifestyle choice, it is about
+    choosing methodologies that best suit your needs as a person. There is no
     template on the perfect lifestyle or what makes any individual person happy.
     It is about redefining your life and how you want to live it through a
     healthy lifestyle of your own choosing. Workouts are what you make of it and
-    how you take your progressions to become a better version of yourself.
-    Defining what workouts you choose to do, defining what foods you decide to
-    put into your body and defining your personal life and what you choose to
-    continue to do each day.  
+    how you take your progressions to become a stronger and healthier version of
+    yourself. Defining what workouts you choose to do, defining what foods you
+    decide to consume and defining your personal life and what you choose to
+    continue to do each day.  "
   points:
     - pointslist: Personalized programming is specific to you and your goals.
     - pointslist: Progressive and structured programming ensures ongoing success
