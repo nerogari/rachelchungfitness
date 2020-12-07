@@ -8,13 +8,13 @@ description: Choose the training package that best suits your needs
 intro:
   blurbs:
     - image: /img/packages.jpg
-      packagetype: In-home Private, Family & Group Training (Virtual options available)
+      packagetype: In-home Private, Family & Group Training + (virtual options)
       text:
-        - package: "Programs available in 5, 10 & 20 session packages. "
+        - package: "Available in 5, 10 & 20 session packages. "
         - package: >
-            Each include 1 free customized workout program based on equipment
-            availability, injuries/restrictions & goals. 
-        - package: Contact me for pricing options
+            Each package includes 1 free customized workout program based on
+            equipment availability, injuries/restrictions & goals. 
+        - package: Contact for pricing options
     - image: /img/packages.jpg
       packagetype: Do it yourself workouts
       text:
