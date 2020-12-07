@@ -8,9 +8,8 @@ My fitness journey began when I was 16 years old, I had suffered a couple of spo
 
 ## Credentials
 
-• Georgebrown College: Fitness & Lifestyle Management\
+• George Brown College: Fitness & Lifestyle Management\
 • Varsity soccer player (Former)\
-• Ryerson University: B’com Marketing & Entrepreneurship\
 • CSEP-CPT: Canadian Society for Exercise Physiology (Former)\
 • OFC: Ontario Fitness Council (Current)\
 • Bellies Inc. Pre & Post Natal\
