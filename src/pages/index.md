@@ -3,9 +3,9 @@ templateKey: index-page
 title: Rachel Chung Fitness
 image: /img/home_banner.jpg
 heading: Services Offered
-subheading: Redefine your Workout
+subheading: " "
 mainpitch:
-  title: Why Redefine Fitness?
+  title: Redefine your Workout
   description: "Redefining fitness is about a lifestyle choice, it is about
     choosing methodologies that best suit your needs as a person. There is no
     template on the perfect lifestyle or what makes any individual person happy.
